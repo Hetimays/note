@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="route53" href="../../route53/index.html" />
+    <link rel="prev" title="Guide" href="../001_Guide/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">AWS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ec2/index.html">ec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lambda/index.html">lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3/index.html">s3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rds/index.html">rds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloudformation/index.html">cloudformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../iam/index.html">iam</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">cloudwatch</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../001_Guide/index.html">Guide</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-commands">Available Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source">Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../route53/index.html">route53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamodb/index.html">dynamodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sns/index.html">sns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sqs/index.html">sqs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../directconnect/index.html">directconnect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../elb/index.html">elb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../EVE-NG_on_proxmox/index.html">EVE-NG構築</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">AWS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">cloudwatch</a></li>
+      <li class="breadcrumb-item active">API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/Contents/AWS/cloudwatch/002_API/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>Amazon CloudWatch monitors your Amazon Web Services (Amazon Web Services) resources and the applications you run on Amazon Web Services in real time. You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and applications.</p>
+</section>
+<section id="available-commands">
+<h2>Available Commands<a class="headerlink" href="#available-commands" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>alarms:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/delete-alarms.html">delete-alarms</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/describe-alarms.html">describe-alarms</a></p></li>
+</ul>
+</dd>
+<dt>anomaly-detector:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/delete-anomaly-detector.html">delete-anomaly-detector</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-anomaly-detector.html">put-anomaly-detector</a></p></li>
+</ul>
+</dd>
+<dt>dashboards:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/delete-dashboards.html">delete-dashboards</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/list-dashboards.html">list-dashboards</a></p></li>
+</ul>
+</dd>
+<dt>insight-rules:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/delete-insight-rules.html">delete-insight-rules</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/describe-insight-rules.html">describe-insight-rules</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/disable-insight-rules.html">disable-insight-rules</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/enable-insight-rules.html">enable-insight-rules</a></p></li>
+</ul>
+</dd>
+<dt>metric-stream:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/delete-metric-stream.html">delete-metric-stream</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/get-metric-stream.html">get-metric-stream</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-metric-stream.html">put-metric-stream</a></p></li>
+</ul>
+</dd>
+<dt>alarm:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/describe-alarm-history.html">describe-alarm-history</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/set-alarm-state.html">set-alarm-state</a></p></li>
+</ul>
+</dd>
+<dt>alarms-for:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/describe-alarms-for-metric.html">describe-alarms-for-metric</a></p></li>
+</ul>
+</dd>
+<dt>anomaly:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/describe-anomaly-detectors.html">describe-anomaly-detectors</a></p></li>
+</ul>
+</dd>
+<dt>alarm-actions:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/disable-alarm-actions.html">disable-alarm-actions</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/enable-alarm-actions.html">enable-alarm-actions</a></p></li>
+</ul>
+</dd>
+<dt>dashboard:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/get-dashboard.html">get-dashboard</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-dashboard.html">put-dashboard</a></p></li>
+</ul>
+</dd>
+<dt>insight-rule:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/get-insight-rule-report.html">get-insight-rule-report</a></p></li>
+</ul>
+</dd>
+<dt>metric-data:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/get-metric-data.html">get-metric-data</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-metric-data.html">put-metric-data</a></p></li>
+</ul>
+</dd>
+<dt>metric:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/get-metric-statistics.html">get-metric-statistics</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-metric-alarm.html">put-metric-alarm</a></p></li>
+</ul>
+</dd>
+<dt>metric-widget:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/get-metric-widget-image.html">get-metric-widget-image</a></p></li>
+</ul>
+</dd>
+<dt>managed-insight-rules:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/list-managed-insight-rules.html">list-managed-insight-rules</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-managed-insight-rules.html">put-managed-insight-rules</a></p></li>
+</ul>
+</dd>
+<dt>metric-streams:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/list-metric-streams.html">list-metric-streams</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/start-metric-streams.html">start-metric-streams</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/stop-metric-streams.html">stop-metric-streams</a></p></li>
+</ul>
+</dd>
+<dt>metrics:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/list-metrics.html">list-metrics</a></p></li>
+</ul>
+</dd>
+<dt>tags-for:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/list-tags-for-resource.html">list-tags-for-resource</a></p></li>
+</ul>
+</dd>
+<dt>composite:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-composite-alarm.html">put-composite-alarm</a></p></li>
+</ul>
+</dd>
+<dt>insight:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-insight-rule.html">put-insight-rule</a></p></li>
+</ul>
+</dd>
+<dt>resource:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/tag-resource.html">tag-resource</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/untag-resource.html">untag-resource</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/wait.html">wait</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="source">
+<h2>Source<a class="headerlink" href="#source" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/index.html">https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/index.html</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../001_Guide/index.html" class="btn btn-neutral float-left" title="Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../route53/index.html" class="btn btn-neutral float-right" title="route53" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="elb" href="../../elb/index.html" />
+    <link rel="prev" title="Guide" href="../001_Guide/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">AWS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ec2/index.html">ec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lambda/index.html">lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3/index.html">s3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rds/index.html">rds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloudformation/index.html">cloudformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../iam/index.html">iam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloudwatch/index.html">cloudwatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../route53/index.html">route53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamodb/index.html">dynamodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sns/index.html">sns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sqs/index.html">sqs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">directconnect</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../001_Guide/index.html">Guide</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-commands">Available Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source">Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../elb/index.html">elb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../EVE-NG_on_proxmox/index.html">EVE-NG構築</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">AWS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">directconnect</a></li>
+      <li class="breadcrumb-item active">API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/Contents/AWS/directconnect/002_API/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.</p>
+</section>
+<section id="available-commands">
+<h2>Available Commands<a class="headerlink" href="#available-commands" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>direct-connect-gateway-association-proposal:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/accept-direct-connect-gateway-association-proposal.html">accept-direct-connect-gateway-association-proposal</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-direct-connect-gateway-association-proposal.html">create-direct-connect-gateway-association-proposal</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/delete-direct-connect-gateway-association-proposal.html">delete-direct-connect-gateway-association-proposal</a></p></li>
+</ul>
+</dd>
+<dt>hosted-connection:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/allocate-hosted-connection.html">allocate-hosted-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/associate-hosted-connection.html">associate-hosted-connection</a></p></li>
+</ul>
+</dd>
+<dt>private-virtual-interface:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/allocate-private-virtual-interface.html">allocate-private-virtual-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/confirm-private-virtual-interface.html">confirm-private-virtual-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-private-virtual-interface.html">create-private-virtual-interface</a></p></li>
+</ul>
+</dd>
+<dt>public-virtual-interface:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/allocate-public-virtual-interface.html">allocate-public-virtual-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/confirm-public-virtual-interface.html">confirm-public-virtual-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-public-virtual-interface.html">create-public-virtual-interface</a></p></li>
+</ul>
+</dd>
+<dt>transit-virtual-interface:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/allocate-transit-virtual-interface.html">allocate-transit-virtual-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/confirm-transit-virtual-interface.html">confirm-transit-virtual-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-transit-virtual-interface.html">create-transit-virtual-interface</a></p></li>
+</ul>
+</dd>
+<dt>connection-with:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/associate-connection-with-lag.html">associate-connection-with-lag</a></p></li>
+</ul>
+</dd>
+<dt>mac-sec-key:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/associate-mac-sec-key.html">associate-mac-sec-key</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/disassociate-mac-sec-key.html">disassociate-mac-sec-key</a></p></li>
+</ul>
+</dd>
+<dt>virtual-interface:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/associate-virtual-interface.html">associate-virtual-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/delete-virtual-interface.html">delete-virtual-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/update-virtual-interface-attributes.html">update-virtual-interface-attributes</a></p></li>
+</ul>
+</dd>
+<dt>connection:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/confirm-connection.html">confirm-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-connection.html">create-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/delete-connection.html">delete-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/update-connection.html">update-connection</a></p></li>
+</ul>
+</dd>
+<dt>customer:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/confirm-customer-agreement.html">confirm-customer-agreement</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-customer-metadata.html">describe-customer-metadata</a></p></li>
+</ul>
+</dd>
+<dt>bgp-peer:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-bgp-peer.html">create-bgp-peer</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/delete-bgp-peer.html">delete-bgp-peer</a></p></li>
+</ul>
+</dd>
+<dt>direct-connect-gateway:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-direct-connect-gateway.html">create-direct-connect-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/delete-direct-connect-gateway.html">delete-direct-connect-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-direct-connect-gateway-associations.html">describe-direct-connect-gateway-associations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-direct-connect-gateway-attachments.html">describe-direct-connect-gateway-attachments</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/update-direct-connect-gateway.html">update-direct-connect-gateway</a></p></li>
+</ul>
+</dd>
+<dt>direct-connect-gateway-association:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-direct-connect-gateway-association.html">create-direct-connect-gateway-association</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/delete-direct-connect-gateway-association.html">delete-direct-connect-gateway-association</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-direct-connect-gateway-association-proposals.html">describe-direct-connect-gateway-association-proposals</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/update-direct-connect-gateway-association.html">update-direct-connect-gateway-association</a></p></li>
+</ul>
+</dd>
+<dt>interconnect:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-interconnect.html">create-interconnect</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/delete-interconnect.html">delete-interconnect</a></p></li>
+</ul>
+</dd>
+<dt>lag:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/create-lag.html">create-lag</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/delete-lag.html">delete-lag</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/update-lag.html">update-lag</a></p></li>
+</ul>
+</dd>
+<dt>connections:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-connections.html">describe-connections</a></p></li>
+</ul>
+</dd>
+<dt>direct-connect:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-direct-connect-gateways.html">describe-direct-connect-gateways</a></p></li>
+</ul>
+</dd>
+<dt>hosted:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-hosted-connections.html">describe-hosted-connections</a></p></li>
+</ul>
+</dd>
+<dt>interconnects:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-interconnects.html">describe-interconnects</a></p></li>
+</ul>
+</dd>
+<dt>lags:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-lags.html">describe-lags</a></p></li>
+</ul>
+</dd>
+<dt>loa:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-loa.html">describe-loa</a></p></li>
+</ul>
+</dd>
+<dt>locations:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-locations.html">describe-locations</a></p></li>
+</ul>
+</dd>
+<dt>router:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-router-configuration.html">describe-router-configuration</a></p></li>
+</ul>
+</dd>
+<dt>tags:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-tags.html">describe-tags</a></p></li>
+</ul>
+</dd>
+<dt>virtual:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-virtual-gateways.html">describe-virtual-gateways</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/describe-virtual-interfaces.html">describe-virtual-interfaces</a></p></li>
+</ul>
+</dd>
+<dt>connection-from:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/disassociate-connection-from-lag.html">disassociate-connection-from-lag</a></p></li>
+</ul>
+</dd>
+<dt>virtual-interface-test:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/list-virtual-interface-test-history.html">list-virtual-interface-test-history</a></p></li>
+</ul>
+</dd>
+<dt>bgp-failover-test:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/start-bgp-failover-test.html">start-bgp-failover-test</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/stop-bgp-failover-test.html">stop-bgp-failover-test</a></p></li>
+</ul>
+</dd>
+<dt>resource:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/tag-resource.html">tag-resource</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/untag-resource.html">untag-resource</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="source">
+<h2>Source<a class="headerlink" href="#source" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/index.html">https://awscli.amazonaws.com/v2/documentation/api/latest/reference/directconnect/index.html</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../001_Guide/index.html" class="btn btn-neutral float-left" title="Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../elb/index.html" class="btn btn-neutral float-right" title="elb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

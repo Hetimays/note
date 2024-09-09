@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="cloudformation" href="../../cloudformation/index.html" />
+    <link rel="prev" title="Guide" href="../001_Guide/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">AWS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ec2/index.html">ec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lambda/index.html">lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3/index.html">s3</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">rds</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../001_Guide/index.html">Guide</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-commands">Available Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source">Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloudformation/index.html">cloudformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../iam/index.html">iam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloudwatch/index.html">cloudwatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../route53/index.html">route53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamodb/index.html">dynamodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sns/index.html">sns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sqs/index.html">sqs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../directconnect/index.html">directconnect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../elb/index.html">elb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../EVE-NG_on_proxmox/index.html">EVE-NG構築</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">AWS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">rds</a></li>
+      <li class="breadcrumb-item active">API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/Contents/AWS/rds/002_API/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the cloud. It provides cost-efficient, resizeable capacity for an industry-standard relational database and manages common database administration tasks, freeing up developers to focus on what makes their applications and businesses unique.</p>
+</section>
+<section id="available-commands">
+<h2>Available Commands<a class="headerlink" href="#available-commands" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>option-to-option:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/add-option-to-option-group.html">add-option-to-option-group</a></p></li>
+</ul>
+</dd>
+<dt>role-to-db:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/add-role-to-db-cluster.html">add-role-to-db-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/add-role-to-db-instance.html">add-role-to-db-instance</a></p></li>
+</ul>
+</dd>
+<dt>source-identifier-to:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/add-source-identifier-to-subscription.html">add-source-identifier-to-subscription</a></p></li>
+</ul>
+</dd>
+<dt>tags-to:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/add-tags-to-resource.html">add-tags-to-resource</a></p></li>
+</ul>
+</dd>
+<dt>pending-maintenance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/apply-pending-maintenance-action.html">apply-pending-maintenance-action</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-pending-maintenance-actions.html">describe-pending-maintenance-actions</a></p></li>
+</ul>
+</dd>
+<dt>db-security-group-ingress:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/authorize-db-security-group-ingress.html">authorize-db-security-group-ingress</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/revoke-db-security-group-ingress.html">revoke-db-security-group-ingress</a></p></li>
+</ul>
+</dd>
+<dt>db-cluster:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/backtrack-db-cluster.html">backtrack-db-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-cluster.html">create-db-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-cluster.html">delete-db-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-cluster-backtracks.html">describe-db-cluster-backtracks</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-cluster-endpoints.html">describe-db-cluster-endpoints</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-cluster-parameters.html">describe-db-cluster-parameters</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-cluster-snapshots.html">describe-db-cluster-snapshots</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/failover-db-cluster.html">failover-db-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-cluster.html">modify-db-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/reboot-db-cluster.html">reboot-db-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/start-db-cluster.html">start-db-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/stop-db-cluster.html">stop-db-cluster</a></p></li>
+</ul>
+</dd>
+<dt>export-task:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/cancel-export-task.html">cancel-export-task</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/start-export-task.html">start-export-task</a></p></li>
+</ul>
+</dd>
+<dt>db-cluster-parameter-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/copy-db-cluster-parameter-group.html">copy-db-cluster-parameter-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-cluster-parameter-group.html">create-db-cluster-parameter-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-cluster-parameter-group.html">delete-db-cluster-parameter-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-cluster-parameter-group.html">modify-db-cluster-parameter-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/reset-db-cluster-parameter-group.html">reset-db-cluster-parameter-group</a></p></li>
+</ul>
+</dd>
+<dt>db-cluster-snapshot:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/copy-db-cluster-snapshot.html">copy-db-cluster-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-cluster-snapshot.html">create-db-cluster-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-cluster-snapshot.html">delete-db-cluster-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-cluster-snapshot-attributes.html">describe-db-cluster-snapshot-attributes</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-cluster-snapshot-attribute.html">modify-db-cluster-snapshot-attribute</a></p></li>
+</ul>
+</dd>
+<dt>db-parameter-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/copy-db-parameter-group.html">copy-db-parameter-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-parameter-group.html">create-db-parameter-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-parameter-group.html">delete-db-parameter-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-parameter-group.html">modify-db-parameter-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/reset-db-parameter-group.html">reset-db-parameter-group</a></p></li>
+</ul>
+</dd>
+<dt>db-snapshot:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/copy-db-snapshot.html">copy-db-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-snapshot.html">create-db-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-snapshot.html">delete-db-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-snapshot-attributes.html">describe-db-snapshot-attributes</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-snapshot.html">modify-db-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-snapshot-attribute.html">modify-db-snapshot-attribute</a></p></li>
+</ul>
+</dd>
+<dt>option-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/copy-option-group.html">copy-option-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-option-group.html">create-option-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-option-group.html">delete-option-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-option-group-options.html">describe-option-group-options</a></p></li>
+</ul>
+</dd>
+<dt>blue-green-deployment:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-blue-green-deployment.html">create-blue-green-deployment</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-blue-green-deployment.html">delete-blue-green-deployment</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/switchover-blue-green-deployment.html">switchover-blue-green-deployment</a></p></li>
+</ul>
+</dd>
+<dt>custom-db-engine-version:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-custom-db-engine-version.html">create-custom-db-engine-version</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-custom-db-engine-version.html">delete-custom-db-engine-version</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-custom-db-engine-version.html">modify-custom-db-engine-version</a></p></li>
+</ul>
+</dd>
+<dt>db-cluster-endpoint:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-cluster-endpoint.html">create-db-cluster-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-cluster-endpoint.html">delete-db-cluster-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-cluster-endpoint.html">modify-db-cluster-endpoint</a></p></li>
+</ul>
+</dd>
+<dt>db-instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html">create-db-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-instance.html">delete-db-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-instance.html">modify-db-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/reboot-db-instance.html">reboot-db-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/start-db-instance.html">start-db-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/stop-db-instance.html">stop-db-instance</a></p></li>
+</ul>
+</dd>
+<dt>db-instance-read:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance-read-replica.html">create-db-instance-read-replica</a></p></li>
+</ul>
+</dd>
+<dt>db-proxy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-proxy.html">create-db-proxy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-proxy.html">delete-db-proxy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-proxy-endpoints.html">describe-db-proxy-endpoints</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-proxy.html">modify-db-proxy</a></p></li>
+</ul>
+</dd>
+<dt>db-proxy-endpoint:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-proxy-endpoint.html">create-db-proxy-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-proxy-endpoint.html">delete-db-proxy-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-proxy-endpoint.html">modify-db-proxy-endpoint</a></p></li>
+</ul>
+</dd>
+<dt>db-security-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-security-group.html">create-db-security-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-security-group.html">delete-db-security-group</a></p></li>
+</ul>
+</dd>
+<dt>db-shard-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-shard-group.html">create-db-shard-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-shard-group.html">delete-db-shard-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-shard-group.html">modify-db-shard-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/reboot-db-shard-group.html">reboot-db-shard-group</a></p></li>
+</ul>
+</dd>
+<dt>db-subnet-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-subnet-group.html">create-db-subnet-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-subnet-group.html">delete-db-subnet-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-subnet-group.html">modify-db-subnet-group</a></p></li>
+</ul>
+</dd>
+<dt>event-subscription:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-event-subscription.html">create-event-subscription</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-event-subscription.html">delete-event-subscription</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-event-subscription.html">modify-event-subscription</a></p></li>
+</ul>
+</dd>
+<dt>global-cluster:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-global-cluster.html">create-global-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-global-cluster.html">delete-global-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/failover-global-cluster.html">failover-global-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-global-cluster.html">modify-global-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/switchover-global-cluster.html">switchover-global-cluster</a></p></li>
+</ul>
+</dd>
+<dt>integration:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-integration.html">create-integration</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-integration.html">delete-integration</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-integration.html">modify-integration</a></p></li>
+</ul>
+</dd>
+<dt>tenant-database:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-tenant-database.html">create-tenant-database</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-tenant-database.html">delete-tenant-database</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-tenant-database.html">modify-tenant-database</a></p></li>
+</ul>
+</dd>
+<dt>db-cluster-automated:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-cluster-automated-backup.html">delete-db-cluster-automated-backup</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-cluster-automated-backups.html">describe-db-cluster-automated-backups</a></p></li>
+</ul>
+</dd>
+<dt>db-instance-automated:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/delete-db-instance-automated-backup.html">delete-db-instance-automated-backup</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-instance-automated-backups.html">describe-db-instance-automated-backups</a></p></li>
+</ul>
+</dd>
+<dt>db-proxy-targets:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/deregister-db-proxy-targets.html">deregister-db-proxy-targets</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-proxy-targets.html">describe-db-proxy-targets</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/register-db-proxy-targets.html">register-db-proxy-targets</a></p></li>
+</ul>
+</dd>
+<dt>account:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-account-attributes.html">describe-account-attributes</a></p></li>
+</ul>
+</dd>
+<dt>blue-green:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-blue-green-deployments.html">describe-blue-green-deployments</a></p></li>
+</ul>
+</dd>
+<dt>certificates:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-certificates.html">describe-certificates</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-certificates.html">modify-certificates</a></p></li>
+</ul>
+</dd>
+<dt>db-cluster-parameter:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-cluster-parameter-groups.html">describe-db-cluster-parameter-groups</a></p></li>
+</ul>
+</dd>
+<dt>db:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-clusters.html">describe-db-clusters</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-parameters.html">describe-db-parameters</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-proxies.html">describe-db-proxies</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-recommendations.html">describe-db-recommendations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-snapshots.html">describe-db-snapshots</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-recommendation.html">modify-db-recommendation</a></p></li>
+</ul>
+</dd>
+<dt>db-engine:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-engine-versions.html">describe-db-engine-versions</a></p></li>
+</ul>
+</dd>
+<dt>db-instances:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-instances.html">describe-db-instances</a></p></li>
+</ul>
+</dd>
+<dt>db-log:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-log-files.html">describe-db-log-files</a></p></li>
+</ul>
+</dd>
+<dt>db-parameter:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-parameter-groups.html">describe-db-parameter-groups</a></p></li>
+</ul>
+</dd>
+<dt>db-proxy-target:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-proxy-target-groups.html">describe-db-proxy-target-groups</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-proxy-target-group.html">modify-db-proxy-target-group</a></p></li>
+</ul>
+</dd>
+<dt>db-security:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-security-groups.html">describe-db-security-groups</a></p></li>
+</ul>
+</dd>
+<dt>db-shard:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-shard-groups.html">describe-db-shard-groups</a></p></li>
+</ul>
+</dd>
+<dt>db-snapshot-tenant:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-snapshot-tenant-databases.html">describe-db-snapshot-tenant-databases</a></p></li>
+</ul>
+</dd>
+<dt>db-subnet:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-db-subnet-groups.html">describe-db-subnet-groups</a></p></li>
+</ul>
+</dd>
+<dt>engine-default-cluster:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-engine-default-cluster-parameters.html">describe-engine-default-cluster-parameters</a></p></li>
+</ul>
+</dd>
+<dt>engine-default:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-engine-default-parameters.html">describe-engine-default-parameters</a></p></li>
+</ul>
+</dd>
+<dt>event:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-event-categories.html">describe-event-categories</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-event-subscriptions.html">describe-event-subscriptions</a></p></li>
+</ul>
+</dd>
+<dt>events:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-events.html">describe-events</a></p></li>
+</ul>
+</dd>
+<dt>export:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-export-tasks.html">describe-export-tasks</a></p></li>
+</ul>
+</dd>
+<dt>global:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-global-clusters.html">describe-global-clusters</a></p></li>
+</ul>
+</dd>
+<dt>integrations:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-integrations.html">describe-integrations</a></p></li>
+</ul>
+</dd>
+<dt>option:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-option-groups.html">describe-option-groups</a></p></li>
+</ul>
+</dd>
+<dt>orderable-db-instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-orderable-db-instance-options.html">describe-orderable-db-instance-options</a></p></li>
+</ul>
+</dd>
+<dt>reserved-db:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-reserved-db-instances.html">describe-reserved-db-instances</a></p></li>
+</ul>
+</dd>
+<dt>reserved-db-instances:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-reserved-db-instances-offerings.html">describe-reserved-db-instances-offerings</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/purchase-reserved-db-instances-offering.html">purchase-reserved-db-instances-offering</a></p></li>
+</ul>
+</dd>
+<dt>source:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-source-regions.html">describe-source-regions</a></p></li>
+</ul>
+</dd>
+<dt>tenant-databases:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-tenant-databases.html">describe-tenant-databases</a></p></li>
+</ul>
+</dd>
+<dt>valid-db-instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/describe-valid-db-instance-modifications.html">describe-valid-db-instance-modifications</a></p></li>
+</ul>
+</dd>
+<dt>http-endpoint:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/disable-http-endpoint.html">disable-http-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/enable-http-endpoint.html">enable-http-endpoint</a></p></li>
+</ul>
+</dd>
+<dt>db-log-file:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/download-db-log-file-portion.html">download-db-log-file-portion</a></p></li>
+</ul>
+</dd>
+<dt>db-auth:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/generate-db-auth-token.html">generate-db-auth-token</a></p></li>
+</ul>
+</dd>
+<dt>tags-for:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/list-tags-for-resource.html">list-tags-for-resource</a></p></li>
+</ul>
+</dd>
+<dt>activity-stream:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-activity-stream.html">modify-activity-stream</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/start-activity-stream.html">start-activity-stream</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/stop-activity-stream.html">stop-activity-stream</a></p></li>
+</ul>
+</dd>
+<dt>current-db-cluster:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-current-db-cluster-capacity.html">modify-current-db-cluster-capacity</a></p></li>
+</ul>
+</dd>
+<dt>read-replica:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/promote-read-replica.html">promote-read-replica</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/switchover-read-replica.html">switchover-read-replica</a></p></li>
+</ul>
+</dd>
+<dt>read-replica-db:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/promote-read-replica-db-cluster.html">promote-read-replica-db-cluster</a></p></li>
+</ul>
+</dd>
+<dt>from-global:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/remove-from-global-cluster.html">remove-from-global-cluster</a></p></li>
+</ul>
+</dd>
+<dt>option-from-option:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/remove-option-from-option-group.html">remove-option-from-option-group</a></p></li>
+</ul>
+</dd>
+<dt>role-from-db:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/remove-role-from-db-cluster.html">remove-role-from-db-cluster</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/remove-role-from-db-instance.html">remove-role-from-db-instance</a></p></li>
+</ul>
+</dd>
+<dt>source-identifier-from:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/remove-source-identifier-from-subscription.html">remove-source-identifier-from-subscription</a></p></li>
+</ul>
+</dd>
+<dt>tags-from:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/remove-tags-from-resource.html">remove-tags-from-resource</a></p></li>
+</ul>
+</dd>
+<dt>db-cluster-from:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/restore-db-cluster-from-s3.html">restore-db-cluster-from-s3</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/restore-db-cluster-from-snapshot.html">restore-db-cluster-from-snapshot</a></p></li>
+</ul>
+</dd>
+<dt>db-cluster-to-point-in:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/restore-db-cluster-to-point-in-time.html">restore-db-cluster-to-point-in-time</a></p></li>
+</ul>
+</dd>
+<dt>db-instance-from-db:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/restore-db-instance-from-db-snapshot.html">restore-db-instance-from-db-snapshot</a></p></li>
+</ul>
+</dd>
+<dt>db-instance-from:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/restore-db-instance-from-s3.html">restore-db-instance-from-s3</a></p></li>
+</ul>
+</dd>
+<dt>db-instance-to-point-in:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/restore-db-instance-to-point-in-time.html">restore-db-instance-to-point-in-time</a></p></li>
+</ul>
+</dd>
+<dt>db-instance-automated-backups-replication:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/start-db-instance-automated-backups-replication.html">start-db-instance-automated-backups-replication</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/stop-db-instance-automated-backups-replication.html">stop-db-instance-automated-backups-replication</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/wait.html">wait</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="source">
+<h2>Source<a class="headerlink" href="#source" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/index.html">https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/index.html</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../001_Guide/index.html" class="btn btn-neutral float-left" title="Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../cloudformation/index.html" class="btn btn-neutral float-right" title="cloudformation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

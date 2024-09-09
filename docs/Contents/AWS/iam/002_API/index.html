@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="cloudwatch" href="../../cloudwatch/index.html" />
+    <link rel="prev" title="Guide" href="../001_Guide/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">AWS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ec2/index.html">ec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lambda/index.html">lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3/index.html">s3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rds/index.html">rds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloudformation/index.html">cloudformation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">iam</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../001_Guide/index.html">Guide</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-commands">Available Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source">Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloudwatch/index.html">cloudwatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../route53/index.html">route53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamodb/index.html">dynamodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sns/index.html">sns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sqs/index.html">sqs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../directconnect/index.html">directconnect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../elb/index.html">elb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../EVE-NG_on_proxmox/index.html">EVE-NG構築</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">AWS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">iam</a></li>
+      <li class="breadcrumb-item active">API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/Contents/AWS/iam/002_API/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services. With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which Amazon Web Services resources users and applications can access. For more information about IAM, see Identity and Access Management (IAM) and the Identity and Access Management User Guide .</p>
+</section>
+<section id="available-commands">
+<h2>Available Commands<a class="headerlink" href="#available-commands" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>client-id-to-open-id-connect:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/add-client-id-to-open-id-connect-provider.html">add-client-id-to-open-id-connect-provider</a></p></li>
+</ul>
+</dd>
+<dt>role-to-instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/add-role-to-instance-profile.html">add-role-to-instance-profile</a></p></li>
+</ul>
+</dd>
+<dt>user-to:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/add-user-to-group.html">add-user-to-group</a></p></li>
+</ul>
+</dd>
+<dt>group-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/attach-group-policy.html">attach-group-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-group-policy.html">delete-group-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/detach-group-policy.html">detach-group-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-group-policy.html">get-group-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/put-group-policy.html">put-group-policy</a></p></li>
+</ul>
+</dd>
+<dt>role-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/attach-role-policy.html">attach-role-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-role-policy.html">delete-role-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/detach-role-policy.html">detach-role-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-role-policy.html">get-role-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/put-role-policy.html">put-role-policy</a></p></li>
+</ul>
+</dd>
+<dt>user-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/attach-user-policy.html">attach-user-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-user-policy.html">delete-user-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/detach-user-policy.html">detach-user-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-user-policy.html">get-user-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/put-user-policy.html">put-user-policy</a></p></li>
+</ul>
+</dd>
+<dt>password:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/change-password.html">change-password</a></p></li>
+</ul>
+</dd>
+<dt>access-key:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-access-key.html">create-access-key</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-access-key.html">delete-access-key</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-access-key.html">update-access-key</a></p></li>
+</ul>
+</dd>
+<dt>account-alias:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-account-alias.html">create-account-alias</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-account-alias.html">delete-account-alias</a></p></li>
+</ul>
+</dd>
+<dt>group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-group.html">create-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-group.html">delete-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-group.html">get-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-group.html">update-group</a></p></li>
+</ul>
+</dd>
+<dt>instance-profile:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-instance-profile.html">create-instance-profile</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-instance-profile.html">delete-instance-profile</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-instance-profile.html">get-instance-profile</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-instance-profile-tags.html">list-instance-profile-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/tag-instance-profile.html">tag-instance-profile</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/untag-instance-profile.html">untag-instance-profile</a></p></li>
+</ul>
+</dd>
+<dt>login-profile:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-login-profile.html">create-login-profile</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-login-profile.html">delete-login-profile</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-login-profile.html">get-login-profile</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-login-profile.html">update-login-profile</a></p></li>
+</ul>
+</dd>
+<dt>open-id-connect-provider:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-open-id-connect-provider.html">create-open-id-connect-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-open-id-connect-provider.html">delete-open-id-connect-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-open-id-connect-provider.html">get-open-id-connect-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-open-id-connect-provider-tags.html">list-open-id-connect-provider-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/tag-open-id-connect-provider.html">tag-open-id-connect-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/untag-open-id-connect-provider.html">untag-open-id-connect-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-open-id-connect-provider-thumbprint.html">update-open-id-connect-provider-thumbprint</a></p></li>
+</ul>
+</dd>
+<dt>policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-policy.html">create-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-policy.html">delete-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-policy.html">get-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-policy-tags.html">list-policy-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-policy-versions.html">list-policy-versions</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/tag-policy.html">tag-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/untag-policy.html">untag-policy</a></p></li>
+</ul>
+</dd>
+<dt>policy-version:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-policy-version.html">create-policy-version</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-policy-version.html">delete-policy-version</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-policy-version.html">get-policy-version</a></p></li>
+</ul>
+</dd>
+<dt>role:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-role.html">create-role</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-role.html">delete-role</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-role.html">get-role</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-role-tags.html">list-role-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/tag-role.html">tag-role</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/untag-role.html">untag-role</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-role.html">update-role</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-role-description.html">update-role-description</a></p></li>
+</ul>
+</dd>
+<dt>saml-provider:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-saml-provider.html">create-saml-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-saml-provider.html">delete-saml-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-saml-provider.html">get-saml-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-saml-provider-tags.html">list-saml-provider-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/tag-saml-provider.html">tag-saml-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/untag-saml-provider.html">untag-saml-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-saml-provider.html">update-saml-provider</a></p></li>
+</ul>
+</dd>
+<dt>service-linked-role:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-service-linked-role.html">create-service-linked-role</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-service-linked-role.html">delete-service-linked-role</a></p></li>
+</ul>
+</dd>
+<dt>service-specific-credential:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-service-specific-credential.html">create-service-specific-credential</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-service-specific-credential.html">delete-service-specific-credential</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/reset-service-specific-credential.html">reset-service-specific-credential</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-service-specific-credential.html">update-service-specific-credential</a></p></li>
+</ul>
+</dd>
+<dt>user:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-user.html">create-user</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-user.html">delete-user</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-user.html">get-user</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-user-tags.html">list-user-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/tag-user.html">tag-user</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/untag-user.html">untag-user</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-user.html">update-user</a></p></li>
+</ul>
+</dd>
+<dt>virtual-mfa-device:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-virtual-mfa-device.html">create-virtual-mfa-device</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-virtual-mfa-device.html">delete-virtual-mfa-device</a></p></li>
+</ul>
+</dd>
+<dt>mfa-device:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/deactivate-mfa-device.html">deactivate-mfa-device</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/enable-mfa-device.html">enable-mfa-device</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-mfa-device.html">get-mfa-device</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-mfa-device-tags.html">list-mfa-device-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/resync-mfa-device.html">resync-mfa-device</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/tag-mfa-device.html">tag-mfa-device</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/untag-mfa-device.html">untag-mfa-device</a></p></li>
+</ul>
+</dd>
+<dt>account-password-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-account-password-policy.html">delete-account-password-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-account-password-policy.html">get-account-password-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-account-password-policy.html">update-account-password-policy</a></p></li>
+</ul>
+</dd>
+<dt>role-permissions-boundary:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-role-permissions-boundary.html">delete-role-permissions-boundary</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/put-role-permissions-boundary.html">put-role-permissions-boundary</a></p></li>
+</ul>
+</dd>
+<dt>server-certificate:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-server-certificate.html">delete-server-certificate</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-server-certificate.html">get-server-certificate</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-server-certificate-tags.html">list-server-certificate-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/tag-server-certificate.html">tag-server-certificate</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/untag-server-certificate.html">untag-server-certificate</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-server-certificate.html">update-server-certificate</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/upload-server-certificate.html">upload-server-certificate</a></p></li>
+</ul>
+</dd>
+<dt>signing-certificate:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-signing-certificate.html">delete-signing-certificate</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-signing-certificate.html">update-signing-certificate</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/upload-signing-certificate.html">upload-signing-certificate</a></p></li>
+</ul>
+</dd>
+<dt>ssh-public-key:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-ssh-public-key.html">delete-ssh-public-key</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-ssh-public-key.html">get-ssh-public-key</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-ssh-public-key.html">update-ssh-public-key</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/upload-ssh-public-key.html">upload-ssh-public-key</a></p></li>
+</ul>
+</dd>
+<dt>user-permissions-boundary:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/delete-user-permissions-boundary.html">delete-user-permissions-boundary</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/put-user-permissions-boundary.html">put-user-permissions-boundary</a></p></li>
+</ul>
+</dd>
+<dt>credential-report:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/generate-credential-report.html">generate-credential-report</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-credential-report.html">get-credential-report</a></p></li>
+</ul>
+</dd>
+<dt>organizations-access-report:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/generate-organizations-access-report.html">generate-organizations-access-report</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-organizations-access-report.html">get-organizations-access-report</a></p></li>
+</ul>
+</dd>
+<dt>service-last-accessed-details:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/generate-service-last-accessed-details.html">generate-service-last-accessed-details</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-service-last-accessed-details.html">get-service-last-accessed-details</a></p></li>
+</ul>
+</dd>
+<dt>access-key-last:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-access-key-last-used.html">get-access-key-last-used</a></p></li>
+</ul>
+</dd>
+<dt>account-authorization:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-account-authorization-details.html">get-account-authorization-details</a></p></li>
+</ul>
+</dd>
+<dt>account:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-account-summary.html">get-account-summary</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-account-aliases.html">list-account-aliases</a></p></li>
+</ul>
+</dd>
+<dt>context-keys-for-custom:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-context-keys-for-custom-policy.html">get-context-keys-for-custom-policy</a></p></li>
+</ul>
+</dd>
+<dt>context-keys-for-principal:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-context-keys-for-principal-policy.html">get-context-keys-for-principal-policy</a></p></li>
+</ul>
+</dd>
+<dt>service-last-accessed-details-with:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-service-last-accessed-details-with-entities.html">get-service-last-accessed-details-with-entities</a></p></li>
+</ul>
+</dd>
+<dt>service-linked-role-deletion:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/get-service-linked-role-deletion-status.html">get-service-linked-role-deletion-status</a></p></li>
+</ul>
+</dd>
+<dt>access:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-access-keys.html">list-access-keys</a></p></li>
+</ul>
+</dd>
+<dt>attached-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-attached-group-policies.html">list-attached-group-policies</a></p></li>
+</ul>
+</dd>
+<dt>attached-role:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-attached-role-policies.html">list-attached-role-policies</a></p></li>
+</ul>
+</dd>
+<dt>attached-user:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-attached-user-policies.html">list-attached-user-policies</a></p></li>
+</ul>
+</dd>
+<dt>entities-for:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-entities-for-policy.html">list-entities-for-policy</a></p></li>
+</ul>
+</dd>
+<dt>group-policies:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-group-policies.html">list-group-policies</a></p></li>
+</ul>
+</dd>
+<dt>groups:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-groups.html">list-groups</a></p></li>
+</ul>
+</dd>
+<dt>groups-for:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-groups-for-user.html">list-groups-for-user</a></p></li>
+</ul>
+</dd>
+<dt>instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-instance-profiles.html">list-instance-profiles</a></p></li>
+</ul>
+</dd>
+<dt>instance-profiles-for:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-instance-profiles-for-role.html">list-instance-profiles-for-role</a></p></li>
+</ul>
+</dd>
+<dt>mfa-devices:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-mfa-devices.html">list-mfa-devices</a></p></li>
+</ul>
+</dd>
+<dt>open-id-connect:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-open-id-connect-providers.html">list-open-id-connect-providers</a></p></li>
+</ul>
+</dd>
+<dt>policies:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-policies.html">list-policies</a></p></li>
+</ul>
+</dd>
+<dt>policies-granting-service:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-policies-granting-service-access.html">list-policies-granting-service-access</a></p></li>
+</ul>
+</dd>
+<dt>role-policies:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-role-policies.html">list-role-policies</a></p></li>
+</ul>
+</dd>
+<dt>roles:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-roles.html">list-roles</a></p></li>
+</ul>
+</dd>
+<dt>saml:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-saml-providers.html">list-saml-providers</a></p></li>
+</ul>
+</dd>
+<dt>server:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-server-certificates.html">list-server-certificates</a></p></li>
+</ul>
+</dd>
+<dt>service-specific:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-service-specific-credentials.html">list-service-specific-credentials</a></p></li>
+</ul>
+</dd>
+<dt>signing:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-signing-certificates.html">list-signing-certificates</a></p></li>
+</ul>
+</dd>
+<dt>ssh-public:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-ssh-public-keys.html">list-ssh-public-keys</a></p></li>
+</ul>
+</dd>
+<dt>user-policies:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-user-policies.html">list-user-policies</a></p></li>
+</ul>
+</dd>
+<dt>users:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-users.html">list-users</a></p></li>
+</ul>
+</dd>
+<dt>virtual-mfa:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-virtual-mfa-devices.html">list-virtual-mfa-devices</a></p></li>
+</ul>
+</dd>
+<dt>client-id-from-open-id-connect:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/remove-client-id-from-open-id-connect-provider.html">remove-client-id-from-open-id-connect-provider</a></p></li>
+</ul>
+</dd>
+<dt>role-from-instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/remove-role-from-instance-profile.html">remove-role-from-instance-profile</a></p></li>
+</ul>
+</dd>
+<dt>user-from:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/remove-user-from-group.html">remove-user-from-group</a></p></li>
+</ul>
+</dd>
+<dt>default-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/set-default-policy-version.html">set-default-policy-version</a></p></li>
+</ul>
+</dd>
+<dt>security-token-service:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/set-security-token-service-preferences.html">set-security-token-service-preferences</a></p></li>
+</ul>
+</dd>
+<dt>custom-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/simulate-custom-policy.html">simulate-custom-policy</a></p></li>
+</ul>
+</dd>
+<dt>principal-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/simulate-principal-policy.html">simulate-principal-policy</a></p></li>
+</ul>
+</dd>
+<dt>assume-role:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-assume-role-policy.html">update-assume-role-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/wait.html">wait</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/wizard.html">wizard</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="source">
+<h2>Source<a class="headerlink" href="#source" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/index.html">https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/index.html</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../001_Guide/index.html" class="btn btn-neutral float-left" title="Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../cloudwatch/index.html" class="btn btn-neutral float-right" title="cloudwatch" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

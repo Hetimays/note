@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="dynamodb" href="../../dynamodb/index.html" />
+    <link rel="prev" title="Guide" href="../001_Guide/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">AWS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ec2/index.html">ec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lambda/index.html">lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3/index.html">s3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rds/index.html">rds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloudformation/index.html">cloudformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../iam/index.html">iam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloudwatch/index.html">cloudwatch</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">route53</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../001_Guide/index.html">Guide</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-commands">Available Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source">Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamodb/index.html">dynamodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sns/index.html">sns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sqs/index.html">sqs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../directconnect/index.html">directconnect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../elb/index.html">elb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../EVE-NG_on_proxmox/index.html">EVE-NG構築</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">AWS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">route53</a></li>
+      <li class="breadcrumb-item active">API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/Contents/AWS/route53/002_API/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service.</p>
+</section>
+<section id="available-commands">
+<h2>Available Commands<a class="headerlink" href="#available-commands" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>key-signing-key:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/activate-key-signing-key.html">activate-key-signing-key</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-key-signing-key.html">create-key-signing-key</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/deactivate-key-signing-key.html">deactivate-key-signing-key</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/delete-key-signing-key.html">delete-key-signing-key</a></p></li>
+</ul>
+</dd>
+<dt>vpc-with-hosted:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/associate-vpc-with-hosted-zone.html">associate-vpc-with-hosted-zone</a></p></li>
+</ul>
+</dd>
+<dt>cidr-collection:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/change-cidr-collection.html">change-cidr-collection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-cidr-collection.html">create-cidr-collection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/delete-cidr-collection.html">delete-cidr-collection</a></p></li>
+</ul>
+</dd>
+<dt>resource-record-sets:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/change-resource-record-sets.html">change-resource-record-sets</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-resource-record-sets.html">list-resource-record-sets</a></p></li>
+</ul>
+</dd>
+<dt>tags-for-resource:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/change-tags-for-resource.html">change-tags-for-resource</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-tags-for-resource.html">list-tags-for-resource</a></p></li>
+</ul>
+</dd>
+<dt>health-check:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-health-check.html">create-health-check</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/delete-health-check.html">delete-health-check</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-health-check.html">get-health-check</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-health-check-count.html">get-health-check-count</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-health-check-status.html">get-health-check-status</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/update-health-check.html">update-health-check</a></p></li>
+</ul>
+</dd>
+<dt>hosted-zone:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-hosted-zone.html">create-hosted-zone</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/delete-hosted-zone.html">delete-hosted-zone</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-hosted-zone.html">get-hosted-zone</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-hosted-zone-count.html">get-hosted-zone-count</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-hosted-zone-limit.html">get-hosted-zone-limit</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/update-hosted-zone-comment.html">update-hosted-zone-comment</a></p></li>
+</ul>
+</dd>
+<dt>query-logging-config:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-query-logging-config.html">create-query-logging-config</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/delete-query-logging-config.html">delete-query-logging-config</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-query-logging-config.html">get-query-logging-config</a></p></li>
+</ul>
+</dd>
+<dt>reusable-delegation-set:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-reusable-delegation-set.html">create-reusable-delegation-set</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/delete-reusable-delegation-set.html">delete-reusable-delegation-set</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-reusable-delegation-set.html">get-reusable-delegation-set</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-reusable-delegation-set-limit.html">get-reusable-delegation-set-limit</a></p></li>
+</ul>
+</dd>
+<dt>traffic-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-traffic-policy.html">create-traffic-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-traffic-policy-version.html">create-traffic-policy-version</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/delete-traffic-policy.html">delete-traffic-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-traffic-policy.html">get-traffic-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-traffic-policy-instances.html">list-traffic-policy-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-traffic-policy-versions.html">list-traffic-policy-versions</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/update-traffic-policy-comment.html">update-traffic-policy-comment</a></p></li>
+</ul>
+</dd>
+<dt>traffic-policy-instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-traffic-policy-instance.html">create-traffic-policy-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/delete-traffic-policy-instance.html">delete-traffic-policy-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-traffic-policy-instance.html">get-traffic-policy-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-traffic-policy-instance-count.html">get-traffic-policy-instance-count</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/update-traffic-policy-instance.html">update-traffic-policy-instance</a></p></li>
+</ul>
+</dd>
+<dt>vpc-association-authorization:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/create-vpc-association-authorization.html">create-vpc-association-authorization</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/delete-vpc-association-authorization.html">delete-vpc-association-authorization</a></p></li>
+</ul>
+</dd>
+<dt>hosted-zone-dnssec:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/disable-hosted-zone-dnssec.html">disable-hosted-zone-dnssec</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/enable-hosted-zone-dnssec.html">enable-hosted-zone-dnssec</a></p></li>
+</ul>
+</dd>
+<dt>vpc-from-hosted:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/disassociate-vpc-from-hosted-zone.html">disassociate-vpc-from-hosted-zone</a></p></li>
+</ul>
+</dd>
+<dt>account:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-account-limit.html">get-account-limit</a></p></li>
+</ul>
+</dd>
+<dt>change:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-change.html">get-change</a></p></li>
+</ul>
+</dd>
+<dt>checker-ip:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-checker-ip-ranges.html">get-checker-ip-ranges</a></p></li>
+</ul>
+</dd>
+<dt>dnssec:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-dnssec.html">get-dnssec</a></p></li>
+</ul>
+</dd>
+<dt>geo:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-geo-location.html">get-geo-location</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-geo-locations.html">list-geo-locations</a></p></li>
+</ul>
+</dd>
+<dt>health-check-last-failure:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/get-health-check-last-failure-reason.html">get-health-check-last-failure-reason</a></p></li>
+</ul>
+</dd>
+<dt>cidr:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-cidr-blocks.html">list-cidr-blocks</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-cidr-collections.html">list-cidr-collections</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-cidr-locations.html">list-cidr-locations</a></p></li>
+</ul>
+</dd>
+<dt>health:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-health-checks.html">list-health-checks</a></p></li>
+</ul>
+</dd>
+<dt>hosted:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-hosted-zones.html">list-hosted-zones</a></p></li>
+</ul>
+</dd>
+<dt>hosted-zones-by:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-hosted-zones-by-name.html">list-hosted-zones-by-name</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-hosted-zones-by-vpc.html">list-hosted-zones-by-vpc</a></p></li>
+</ul>
+</dd>
+<dt>query-logging:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-query-logging-configs.html">list-query-logging-configs</a></p></li>
+</ul>
+</dd>
+<dt>reusable-delegation:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-reusable-delegation-sets.html">list-reusable-delegation-sets</a></p></li>
+</ul>
+</dd>
+<dt>tags-for:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-tags-for-resources.html">list-tags-for-resources</a></p></li>
+</ul>
+</dd>
+<dt>traffic:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-traffic-policies.html">list-traffic-policies</a></p></li>
+</ul>
+</dd>
+<dt>traffic-policy-instances-by-hosted:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-traffic-policy-instances-by-hosted-zone.html">list-traffic-policy-instances-by-hosted-zone</a></p></li>
+</ul>
+</dd>
+<dt>traffic-policy-instances-by:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-traffic-policy-instances-by-policy.html">list-traffic-policy-instances-by-policy</a></p></li>
+</ul>
+</dd>
+<dt>vpc-association:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/list-vpc-association-authorizations.html">list-vpc-association-authorizations</a></p></li>
+</ul>
+</dd>
+<dt>dns:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/test-dns-answer.html">test-dns-answer</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/wait.html">wait</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="source">
+<h2>Source<a class="headerlink" href="#source" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/index.html">https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/index.html</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../001_Guide/index.html" class="btn btn-neutral float-left" title="Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../dynamodb/index.html" class="btn btn-neutral float-right" title="dynamodb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

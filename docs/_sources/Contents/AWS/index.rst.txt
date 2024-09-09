@@ -10,6 +10,7 @@ AWS
    s3/index
    rds/index
    cloudformation/index
+   transit-gateway/index
    iam/index
    cloudwatch/index
    route53/index

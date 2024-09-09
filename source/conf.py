@@ -44,4 +44,4 @@ source_suffix = {
     '.md': 'markdown',
 }
 
-html_style = "css/my_theme.css"
+html_css_files = ['css/my_theme.css', 'css/fix-layout-pyproperty.css']

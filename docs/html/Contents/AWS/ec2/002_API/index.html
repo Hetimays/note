@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="lambda" href="../../lambda/index.html" />
+    <link rel="prev" title="Guide" href="../001_Guide/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">AWS</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">ec2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../001_Guide/index.html">Guide</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-commands">Available Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source">Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lambda/index.html">lambda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../EVE-NG_on_proxmox/index.html">EVE-NG構築</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">AWS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">ec2</a></li>
+      <li class="breadcrumb-item active">API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/Contents/AWS/ec2/002_API/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>You can access the features of Amazon Elastic Compute Cloud (Amazon EC2) programmatically. For more information, see the Amazon EC2 Developer Guide .</p>
+</section>
+<section id="available-commands">
+<h2>Available Commands<a class="headerlink" href="#available-commands" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>address-transfer:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/accept-address-transfer.html">accept-address-transfer</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-address-transfer.html">disable-address-transfer</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-address-transfer.html">enable-address-transfer</a></p></li>
+</ul>
+</dd>
+<dt>reserved-instances-exchange-quote:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/accept-reserved-instances-exchange-quote.html">accept-reserved-instances-exchange-quote</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-reserved-instances-exchange-quote.html">get-reserved-instances-exchange-quote</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-multicast-domain-associations:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/accept-transit-gateway-multicast-domain-associations.html">accept-transit-gateway-multicast-domain-associations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-transit-gateway-multicast-domain-associations.html">get-transit-gateway-multicast-domain-associations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reject-transit-gateway-multicast-domain-associations.html">reject-transit-gateway-multicast-domain-associations</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-peering-attachment:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/accept-transit-gateway-peering-attachment.html">accept-transit-gateway-peering-attachment</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-peering-attachment.html">create-transit-gateway-peering-attachment</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-peering-attachment.html">delete-transit-gateway-peering-attachment</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reject-transit-gateway-peering-attachment.html">reject-transit-gateway-peering-attachment</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-vpc-attachment:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/accept-transit-gateway-vpc-attachment.html">accept-transit-gateway-vpc-attachment</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-vpc-attachment.html">create-transit-gateway-vpc-attachment</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-vpc-attachment.html">delete-transit-gateway-vpc-attachment</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-transit-gateway-vpc-attachment.html">modify-transit-gateway-vpc-attachment</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reject-transit-gateway-vpc-attachment.html">reject-transit-gateway-vpc-attachment</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoint-connections:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/accept-vpc-endpoint-connections.html">accept-vpc-endpoint-connections</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-endpoint-connections.html">describe-vpc-endpoint-connections</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reject-vpc-endpoint-connections.html">reject-vpc-endpoint-connections</a></p></li>
+</ul>
+</dd>
+<dt>vpc-peering-connection:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/accept-vpc-peering-connection.html">accept-vpc-peering-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-vpc-peering-connection.html">create-vpc-peering-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-vpc-peering-connection.html">delete-vpc-peering-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpc-peering-connection-options.html">modify-vpc-peering-connection-options</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reject-vpc-peering-connection.html">reject-vpc-peering-connection</a></p></li>
+</ul>
+</dd>
+<dt>byoip-cidr:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/advertise-byoip-cidr.html">advertise-byoip-cidr</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/deprovision-byoip-cidr.html">deprovision-byoip-cidr</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/provision-byoip-cidr.html">provision-byoip-cidr</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/withdraw-byoip-cidr.html">withdraw-byoip-cidr</a></p></li>
+</ul>
+</dd>
+<dt>address:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/allocate-address.html">allocate-address</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-address.html">associate-address</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-address-transfers.html">describe-address-transfers</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-address.html">disassociate-address</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/release-address.html">release-address</a></p></li>
+</ul>
+</dd>
+<dt>hosts:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/allocate-hosts.html">allocate-hosts</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-hosts.html">describe-hosts</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-hosts.html">modify-hosts</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/release-hosts.html">release-hosts</a></p></li>
+</ul>
+</dd>
+<dt>ipam-pool-cidr:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/allocate-ipam-pool-cidr.html">allocate-ipam-pool-cidr</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/deprovision-ipam-pool-cidr.html">deprovision-ipam-pool-cidr</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/provision-ipam-pool-cidr.html">provision-ipam-pool-cidr</a></p></li>
+</ul>
+</dd>
+<dt>security-groups-to-client-vpn-target:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/apply-security-groups-to-client-vpn-target-network.html">apply-security-groups-to-client-vpn-target-network</a></p></li>
+</ul>
+</dd>
+<dt>ipv6-addresses:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/assign-ipv6-addresses.html">assign-ipv6-addresses</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/unassign-ipv6-addresses.html">unassign-ipv6-addresses</a></p></li>
+</ul>
+</dd>
+<dt>private-ip-addresses:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/assign-private-ip-addresses.html">assign-private-ip-addresses</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/unassign-private-ip-addresses.html">unassign-private-ip-addresses</a></p></li>
+</ul>
+</dd>
+<dt>private-nat-gateway-address:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/assign-private-nat-gateway-address.html">assign-private-nat-gateway-address</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/unassign-private-nat-gateway-address.html">unassign-private-nat-gateway-address</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn-target-network:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-client-vpn-target-network.html">associate-client-vpn-target-network</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-client-vpn-target-network.html">disassociate-client-vpn-target-network</a></p></li>
+</ul>
+</dd>
+<dt>dhcp-options:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-dhcp-options.html">associate-dhcp-options</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-dhcp-options.html">create-dhcp-options</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-dhcp-options.html">delete-dhcp-options</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-dhcp-options.html">describe-dhcp-options</a></p></li>
+</ul>
+</dd>
+<dt>enclave-certificate-iam-role:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-enclave-certificate-iam-role.html">associate-enclave-certificate-iam-role</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-enclave-certificate-iam-role.html">disassociate-enclave-certificate-iam-role</a></p></li>
+</ul>
+</dd>
+<dt>iam-instance-profile:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-iam-instance-profile.html">associate-iam-instance-profile</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-iam-instance-profile-associations.html">describe-iam-instance-profile-associations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-iam-instance-profile.html">disassociate-iam-instance-profile</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/replace-iam-instance-profile-association.html">replace-iam-instance-profile-association</a></p></li>
+</ul>
+</dd>
+<dt>instance-event-window:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-instance-event-window.html">associate-instance-event-window</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-instance-event-window.html">create-instance-event-window</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-instance-event-window.html">delete-instance-event-window</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-instance-event-window.html">disassociate-instance-event-window</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-instance-event-window.html">modify-instance-event-window</a></p></li>
+</ul>
+</dd>
+<dt>ipam-byoasn:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-ipam-byoasn.html">associate-ipam-byoasn</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/deprovision-ipam-byoasn.html">deprovision-ipam-byoasn</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-ipam-byoasn.html">describe-ipam-byoasn</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-ipam-byoasn.html">disassociate-ipam-byoasn</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/provision-ipam-byoasn.html">provision-ipam-byoasn</a></p></li>
+</ul>
+</dd>
+<dt>ipam-resource-discovery:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-ipam-resource-discovery.html">associate-ipam-resource-discovery</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-ipam-resource-discovery.html">create-ipam-resource-discovery</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-ipam-resource-discovery.html">delete-ipam-resource-discovery</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-ipam-resource-discovery-associations.html">describe-ipam-resource-discovery-associations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-ipam-resource-discovery.html">disassociate-ipam-resource-discovery</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-ipam-resource-discovery.html">modify-ipam-resource-discovery</a></p></li>
+</ul>
+</dd>
+<dt>nat-gateway-address:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-nat-gateway-address.html">associate-nat-gateway-address</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-nat-gateway-address.html">disassociate-nat-gateway-address</a></p></li>
+</ul>
+</dd>
+<dt>route-table:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-route-table.html">associate-route-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-route-table.html">create-route-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-route-table.html">delete-route-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-route-table.html">disassociate-route-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/replace-route-table-association.html">replace-route-table-association</a></p></li>
+</ul>
+</dd>
+<dt>subnet-cidr-block:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-subnet-cidr-block.html">associate-subnet-cidr-block</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-subnet-cidr-block.html">disassociate-subnet-cidr-block</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-multicast-domain:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-transit-gateway-multicast-domain.html">associate-transit-gateway-multicast-domain</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-multicast-domain.html">create-transit-gateway-multicast-domain</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-multicast-domain.html">delete-transit-gateway-multicast-domain</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-transit-gateway-multicast-domain.html">disassociate-transit-gateway-multicast-domain</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-policy-table:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-transit-gateway-policy-table.html">associate-transit-gateway-policy-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-policy-table.html">create-transit-gateway-policy-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-policy-table.html">delete-transit-gateway-policy-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-transit-gateway-policy-table.html">disassociate-transit-gateway-policy-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-transit-gateway-policy-table-associations.html">get-transit-gateway-policy-table-associations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-transit-gateway-policy-table-entries.html">get-transit-gateway-policy-table-entries</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-route-table:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-transit-gateway-route-table.html">associate-transit-gateway-route-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-route-table.html">create-transit-gateway-route-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-route-table.html">delete-transit-gateway-route-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateway-route-table-announcements.html">describe-transit-gateway-route-table-announcements</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-transit-gateway-route-table.html">disassociate-transit-gateway-route-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-transit-gateway-route-table-associations.html">get-transit-gateway-route-table-associations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-transit-gateway-route-table-propagations.html">get-transit-gateway-route-table-propagations</a></p></li>
+</ul>
+</dd>
+<dt>trunk-interface:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-trunk-interface.html">associate-trunk-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-trunk-interface-associations.html">describe-trunk-interface-associations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-trunk-interface.html">disassociate-trunk-interface</a></p></li>
+</ul>
+</dd>
+<dt>vpc-cidr-block:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-vpc-cidr-block.html">associate-vpc-cidr-block</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disassociate-vpc-cidr-block.html">disassociate-vpc-cidr-block</a></p></li>
+</ul>
+</dd>
+<dt>classic-link-vpc:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/attach-classic-link-vpc.html">attach-classic-link-vpc</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/detach-classic-link-vpc.html">detach-classic-link-vpc</a></p></li>
+</ul>
+</dd>
+<dt>internet-gateway:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/attach-internet-gateway.html">attach-internet-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-internet-gateway.html">create-internet-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-internet-gateway.html">delete-internet-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/detach-internet-gateway.html">detach-internet-gateway</a></p></li>
+</ul>
+</dd>
+<dt>network-interface:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/attach-network-interface.html">attach-network-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-network-interface.html">create-network-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-network-interface.html">delete-network-interface</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-network-interface-permissions.html">describe-network-interface-permissions</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/detach-network-interface.html">detach-network-interface</a></p></li>
+</ul>
+</dd>
+<dt>verified-access-trust-provider:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/attach-verified-access-trust-provider.html">attach-verified-access-trust-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-verified-access-trust-provider.html">create-verified-access-trust-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-verified-access-trust-provider.html">delete-verified-access-trust-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/detach-verified-access-trust-provider.html">detach-verified-access-trust-provider</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-verified-access-trust-provider.html">modify-verified-access-trust-provider</a></p></li>
+</ul>
+</dd>
+<dt>volume:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/attach-volume.html">attach-volume</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-volume.html">create-volume</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-volume.html">delete-volume</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-volume-status.html">describe-volume-status</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/detach-volume.html">detach-volume</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-volume-io.html">enable-volume-io</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-volume.html">modify-volume</a></p></li>
+</ul>
+</dd>
+<dt>vpn-gateway:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/attach-vpn-gateway.html">attach-vpn-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-vpn-gateway.html">create-vpn-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-vpn-gateway.html">delete-vpn-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/detach-vpn-gateway.html">detach-vpn-gateway</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn-ingress:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/authorize-client-vpn-ingress.html">authorize-client-vpn-ingress</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/revoke-client-vpn-ingress.html">revoke-client-vpn-ingress</a></p></li>
+</ul>
+</dd>
+<dt>security-group-egress:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/authorize-security-group-egress.html">authorize-security-group-egress</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/revoke-security-group-egress.html">revoke-security-group-egress</a></p></li>
+</ul>
+</dd>
+<dt>security-group-ingress:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/authorize-security-group-ingress.html">authorize-security-group-ingress</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/revoke-security-group-ingress.html">revoke-security-group-ingress</a></p></li>
+</ul>
+</dd>
+<dt>instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/bundle-instance.html">bundle-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instance-topology.html">describe-instance-topology</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instance-types.html">describe-instance-types</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-instance-placement.html">modify-instance-placement</a></p></li>
+</ul>
+</dd>
+<dt>bundle:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-bundle-task.html">cancel-bundle-task</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-bundle-tasks.html">describe-bundle-tasks</a></p></li>
+</ul>
+</dd>
+<dt>capacity-reservation:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-capacity-reservation.html">cancel-capacity-reservation</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-capacity-reservation.html">create-capacity-reservation</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-capacity-reservation-usage.html">get-capacity-reservation-usage</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-capacity-reservation.html">modify-capacity-reservation</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/move-capacity-reservation-instances.html">move-capacity-reservation-instances</a></p></li>
+</ul>
+</dd>
+<dt>capacity-reservation-fleets:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-capacity-reservation-fleets.html">cancel-capacity-reservation-fleets</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-capacity-reservation-fleets.html">describe-capacity-reservation-fleets</a></p></li>
+</ul>
+</dd>
+<dt>conversion:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-conversion-task.html">cancel-conversion-task</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-conversion-tasks.html">describe-conversion-tasks</a></p></li>
+</ul>
+</dd>
+<dt>export-task:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-export-task.html">cancel-export-task</a></p></li>
+</ul>
+</dd>
+<dt>image-launch:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-image-launch-permission.html">cancel-image-launch-permission</a></p></li>
+</ul>
+</dd>
+<dt>import:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-import-task.html">cancel-import-task</a></p></li>
+</ul>
+</dd>
+<dt>reserved-instances-listing:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-reserved-instances-listing.html">cancel-reserved-instances-listing</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-reserved-instances-listing.html">create-reserved-instances-listing</a></p></li>
+</ul>
+</dd>
+<dt>spot-fleet-requests:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-spot-fleet-requests.html">cancel-spot-fleet-requests</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-spot-fleet-requests.html">describe-spot-fleet-requests</a></p></li>
+</ul>
+</dd>
+<dt>spot-instance-requests:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/cancel-spot-instance-requests.html">cancel-spot-instance-requests</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-spot-instance-requests.html">describe-spot-instance-requests</a></p></li>
+</ul>
+</dd>
+<dt>product:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/confirm-product-instance.html">confirm-product-instance</a></p></li>
+</ul>
+</dd>
+<dt>fpga-image:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/copy-fpga-image.html">copy-fpga-image</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-fpga-image.html">create-fpga-image</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-fpga-image.html">delete-fpga-image</a></p></li>
+</ul>
+</dd>
+<dt>image:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/copy-image.html">copy-image</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-image.html">create-image</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/deregister-image.html">deregister-image</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-image.html">disable-image</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-image.html">enable-image</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/export-image.html">export-image</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/import-image.html">import-image</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/register-image.html">register-image</a></p></li>
+</ul>
+</dd>
+<dt>snapshot:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/copy-snapshot.html">copy-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-snapshot.html">create-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-snapshot.html">delete-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/import-snapshot.html">import-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/lock-snapshot.html">lock-snapshot</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/unlock-snapshot.html">unlock-snapshot</a></p></li>
+</ul>
+</dd>
+<dt>capacity-reservation-by:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-capacity-reservation-by-splitting.html">create-capacity-reservation-by-splitting</a></p></li>
+</ul>
+</dd>
+<dt>capacity-reservation-fleet:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-capacity-reservation-fleet.html">create-capacity-reservation-fleet</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-capacity-reservation-fleet.html">modify-capacity-reservation-fleet</a></p></li>
+</ul>
+</dd>
+<dt>carrier-gateway:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-carrier-gateway.html">create-carrier-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-carrier-gateway.html">delete-carrier-gateway</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn-endpoint:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-client-vpn-endpoint.html">create-client-vpn-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-client-vpn-endpoint.html">delete-client-vpn-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-client-vpn-endpoint.html">modify-client-vpn-endpoint</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn-route:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-client-vpn-route.html">create-client-vpn-route</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-client-vpn-route.html">delete-client-vpn-route</a></p></li>
+</ul>
+</dd>
+<dt>coip-cidr:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-coip-cidr.html">create-coip-cidr</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-coip-cidr.html">delete-coip-cidr</a></p></li>
+</ul>
+</dd>
+<dt>coip-pool:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-coip-pool.html">create-coip-pool</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-coip-pool.html">delete-coip-pool</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-coip-pool-usage.html">get-coip-pool-usage</a></p></li>
+</ul>
+</dd>
+<dt>customer-gateway:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-customer-gateway.html">create-customer-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-customer-gateway.html">delete-customer-gateway</a></p></li>
+</ul>
+</dd>
+<dt>default:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-default-subnet.html">create-default-subnet</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-default-vpc.html">create-default-vpc</a></p></li>
+</ul>
+</dd>
+<dt>egress-only-internet-gateway:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-egress-only-internet-gateway.html">create-egress-only-internet-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-egress-only-internet-gateway.html">delete-egress-only-internet-gateway</a></p></li>
+</ul>
+</dd>
+<dt>fleet:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-fleet.html">create-fleet</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-fleet-history.html">describe-fleet-history</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-fleet.html">modify-fleet</a></p></li>
+</ul>
+</dd>
+<dt>flow-logs:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-flow-logs.html">create-flow-logs</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-flow-logs.html">delete-flow-logs</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-flow-logs.html">describe-flow-logs</a></p></li>
+</ul>
+</dd>
+<dt>instance-connect-endpoint:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-instance-connect-endpoint.html">create-instance-connect-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-instance-connect-endpoint.html">delete-instance-connect-endpoint</a></p></li>
+</ul>
+</dd>
+<dt>instance-export:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-instance-export-task.html">create-instance-export-task</a></p></li>
+</ul>
+</dd>
+<dt>ipam:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-ipam.html">create-ipam</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-ipam.html">delete-ipam</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-ipam-pools.html">describe-ipam-pools</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-ipam-scopes.html">describe-ipam-scopes</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-ipam.html">modify-ipam</a></p></li>
+</ul>
+</dd>
+<dt>ipam-external-resource-verification-token:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-ipam-external-resource-verification-token.html">create-ipam-external-resource-verification-token</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-ipam-external-resource-verification-token.html">delete-ipam-external-resource-verification-token</a></p></li>
+</ul>
+</dd>
+<dt>ipam-pool:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-ipam-pool.html">create-ipam-pool</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-ipam-pool.html">delete-ipam-pool</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-ipam-pool-allocations.html">get-ipam-pool-allocations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-ipam-pool-cidrs.html">get-ipam-pool-cidrs</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-ipam-pool.html">modify-ipam-pool</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/release-ipam-pool-allocation.html">release-ipam-pool-allocation</a></p></li>
+</ul>
+</dd>
+<dt>ipam-scope:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-ipam-scope.html">create-ipam-scope</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-ipam-scope.html">delete-ipam-scope</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-ipam-scope.html">modify-ipam-scope</a></p></li>
+</ul>
+</dd>
+<dt>key-pair:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-key-pair.html">create-key-pair</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-key-pair.html">delete-key-pair</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/import-key-pair.html">import-key-pair</a></p></li>
+</ul>
+</dd>
+<dt>launch-template:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-launch-template.html">create-launch-template</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-launch-template-version.html">create-launch-template-version</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-launch-template.html">delete-launch-template</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-launch-template-data.html">get-launch-template-data</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-launch-template.html">modify-launch-template</a></p></li>
+</ul>
+</dd>
+<dt>local-gateway-route:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-local-gateway-route.html">create-local-gateway-route</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-local-gateway-route.html">delete-local-gateway-route</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-local-gateway-route-tables.html">describe-local-gateway-route-tables</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-local-gateway-route.html">modify-local-gateway-route</a></p></li>
+</ul>
+</dd>
+<dt>local-gateway-route-table:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-local-gateway-route-table.html">create-local-gateway-route-table</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-local-gateway-route-table.html">delete-local-gateway-route-table</a></p></li>
+</ul>
+</dd>
+<dt>local-gateway-route-table-virtual-interface-group-association:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-local-gateway-route-table-virtual-interface-group-association.html">create-local-gateway-route-table-virtual-interface-group-association</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-local-gateway-route-table-virtual-interface-group-association.html">delete-local-gateway-route-table-virtual-interface-group-association</a></p></li>
+</ul>
+</dd>
+<dt>local-gateway-route-table-vpc-association:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-local-gateway-route-table-vpc-association.html">create-local-gateway-route-table-vpc-association</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-local-gateway-route-table-vpc-association.html">delete-local-gateway-route-table-vpc-association</a></p></li>
+</ul>
+</dd>
+<dt>managed-prefix-list:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-managed-prefix-list.html">create-managed-prefix-list</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-managed-prefix-list.html">delete-managed-prefix-list</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-managed-prefix-list-associations.html">get-managed-prefix-list-associations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-managed-prefix-list-entries.html">get-managed-prefix-list-entries</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-managed-prefix-list.html">modify-managed-prefix-list</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/restore-managed-prefix-list-version.html">restore-managed-prefix-list-version</a></p></li>
+</ul>
+</dd>
+<dt>nat-gateway:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-nat-gateway.html">create-nat-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-nat-gateway.html">delete-nat-gateway</a></p></li>
+</ul>
+</dd>
+<dt>network-acl:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-network-acl.html">create-network-acl</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-network-acl.html">delete-network-acl</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/replace-network-acl-association.html">replace-network-acl-association</a></p></li>
+</ul>
+</dd>
+<dt>network-acl-entry:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-network-acl-entry.html">create-network-acl-entry</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-network-acl-entry.html">delete-network-acl-entry</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/replace-network-acl-entry.html">replace-network-acl-entry</a></p></li>
+</ul>
+</dd>
+<dt>network-insights-access-scope:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-network-insights-access-scope.html">create-network-insights-access-scope</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-network-insights-access-scope.html">delete-network-insights-access-scope</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-network-insights-access-scope-analyses.html">describe-network-insights-access-scope-analyses</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-network-insights-access-scope-content.html">get-network-insights-access-scope-content</a></p></li>
+</ul>
+</dd>
+<dt>network-insights-path:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-network-insights-path.html">create-network-insights-path</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-network-insights-path.html">delete-network-insights-path</a></p></li>
+</ul>
+</dd>
+<dt>network-interface-permission:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-network-interface-permission.html">create-network-interface-permission</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-network-interface-permission.html">delete-network-interface-permission</a></p></li>
+</ul>
+</dd>
+<dt>placement-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-placement-group.html">create-placement-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-placement-group.html">delete-placement-group</a></p></li>
+</ul>
+</dd>
+<dt>public-ipv4-pool:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-public-ipv4-pool.html">create-public-ipv4-pool</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-public-ipv4-pool.html">delete-public-ipv4-pool</a></p></li>
+</ul>
+</dd>
+<dt>replace-root-volume:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-replace-root-volume-task.html">create-replace-root-volume-task</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-replace-root-volume-tasks.html">describe-replace-root-volume-tasks</a></p></li>
+</ul>
+</dd>
+<dt>restore-image:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-restore-image-task.html">create-restore-image-task</a></p></li>
+</ul>
+</dd>
+<dt>route:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-route.html">create-route</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-route.html">delete-route</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/replace-route.html">replace-route</a></p></li>
+</ul>
+</dd>
+<dt>security-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-security-group.html">create-security-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-security-group.html">delete-security-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-security-group-references.html">describe-security-group-references</a></p></li>
+</ul>
+</dd>
+<dt>snapshots:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-snapshots.html">create-snapshots</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-snapshots.html">describe-snapshots</a></p></li>
+</ul>
+</dd>
+<dt>spot-datafeed-subscription:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-spot-datafeed-subscription.html">create-spot-datafeed-subscription</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-spot-datafeed-subscription.html">delete-spot-datafeed-subscription</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-spot-datafeed-subscription.html">describe-spot-datafeed-subscription</a></p></li>
+</ul>
+</dd>
+<dt>store-image-task:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-store-image-task.html">create-store-image-task</a></p></li>
+</ul>
+</dd>
+<dt>subnet:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-subnet.html">create-subnet</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-subnet.html">delete-subnet</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-subnet-attribute.html">modify-subnet-attribute</a></p></li>
+</ul>
+</dd>
+<dt>subnet-cidr-reservation:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-subnet-cidr-reservation.html">create-subnet-cidr-reservation</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-subnet-cidr-reservation.html">delete-subnet-cidr-reservation</a></p></li>
+</ul>
+</dd>
+<dt>tags:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-tags.html">create-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-tags.html">delete-tags</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-tags.html">describe-tags</a></p></li>
+</ul>
+</dd>
+<dt>traffic-mirror-filter:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-traffic-mirror-filter.html">create-traffic-mirror-filter</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-traffic-mirror-filter.html">delete-traffic-mirror-filter</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-traffic-mirror-filter-rules.html">describe-traffic-mirror-filter-rules</a></p></li>
+</ul>
+</dd>
+<dt>traffic-mirror-filter-rule:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-traffic-mirror-filter-rule.html">create-traffic-mirror-filter-rule</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-traffic-mirror-filter-rule.html">delete-traffic-mirror-filter-rule</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-traffic-mirror-filter-rule.html">modify-traffic-mirror-filter-rule</a></p></li>
+</ul>
+</dd>
+<dt>traffic-mirror-session:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-traffic-mirror-session.html">create-traffic-mirror-session</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-traffic-mirror-session.html">delete-traffic-mirror-session</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-traffic-mirror-session.html">modify-traffic-mirror-session</a></p></li>
+</ul>
+</dd>
+<dt>traffic-mirror-target:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-traffic-mirror-target.html">create-traffic-mirror-target</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-traffic-mirror-target.html">delete-traffic-mirror-target</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway.html">create-transit-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway.html">delete-transit-gateway</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateway-attachments.html">describe-transit-gateway-attachments</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateway-connects.html">describe-transit-gateway-connects</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-transit-gateway.html">modify-transit-gateway</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-connect:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-connect.html">create-transit-gateway-connect</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-connect.html">delete-transit-gateway-connect</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateway-connect-peers.html">describe-transit-gateway-connect-peers</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-connect-peer:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-connect-peer.html">create-transit-gateway-connect-peer</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-connect-peer.html">delete-transit-gateway-connect-peer</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-prefix-list-reference:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-prefix-list-reference.html">create-transit-gateway-prefix-list-reference</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-prefix-list-reference.html">delete-transit-gateway-prefix-list-reference</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-transit-gateway-prefix-list-reference.html">modify-transit-gateway-prefix-list-reference</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-route:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-route.html">create-transit-gateway-route</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-route.html">delete-transit-gateway-route</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateway-route-tables.html">describe-transit-gateway-route-tables</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/replace-transit-gateway-route.html">replace-transit-gateway-route</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-route-table-announcement:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-transit-gateway-route-table-announcement.html">create-transit-gateway-route-table-announcement</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-transit-gateway-route-table-announcement.html">delete-transit-gateway-route-table-announcement</a></p></li>
+</ul>
+</dd>
+<dt>verified-access-endpoint:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-verified-access-endpoint.html">create-verified-access-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-verified-access-endpoint.html">delete-verified-access-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-verified-access-endpoint.html">modify-verified-access-endpoint</a></p></li>
+</ul>
+</dd>
+<dt>verified-access-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-verified-access-group.html">create-verified-access-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-verified-access-group.html">delete-verified-access-group</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-verified-access-group.html">modify-verified-access-group</a></p></li>
+</ul>
+</dd>
+<dt>verified-access-instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-verified-access-instance.html">create-verified-access-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-verified-access-instance.html">delete-verified-access-instance</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-verified-access-instance.html">modify-verified-access-instance</a></p></li>
+</ul>
+</dd>
+<dt>vpc:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-vpc.html">create-vpc</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-vpc.html">delete-vpc</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpc-tenancy.html">modify-vpc-tenancy</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoint:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-vpc-endpoint.html">create-vpc-endpoint</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-endpoint-services.html">describe-vpc-endpoint-services</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpc-endpoint.html">modify-vpc-endpoint</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoint-connection-notification:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-vpc-endpoint-connection-notification.html">create-vpc-endpoint-connection-notification</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpc-endpoint-connection-notification.html">modify-vpc-endpoint-connection-notification</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoint-service-configuration:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-vpc-endpoint-service-configuration.html">create-vpc-endpoint-service-configuration</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpc-endpoint-service-configuration.html">modify-vpc-endpoint-service-configuration</a></p></li>
+</ul>
+</dd>
+<dt>vpn-connection:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-vpn-connection.html">create-vpn-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-vpn-connection.html">delete-vpn-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpn-connection.html">modify-vpn-connection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpn-connection-options.html">modify-vpn-connection-options</a></p></li>
+</ul>
+</dd>
+<dt>vpn-connection-route:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-vpn-connection-route.html">create-vpn-connection-route</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-vpn-connection-route.html">delete-vpn-connection-route</a></p></li>
+</ul>
+</dd>
+<dt>fleets:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-fleets.html">delete-fleets</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-fleets.html">describe-fleets</a></p></li>
+</ul>
+</dd>
+<dt>launch-template-versions:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-launch-template-versions.html">delete-launch-template-versions</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-launch-template-versions.html">describe-launch-template-versions</a></p></li>
+</ul>
+</dd>
+<dt>network-insights-access-scope-analysis:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-network-insights-access-scope-analysis.html">delete-network-insights-access-scope-analysis</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-network-insights-access-scope-analysis-findings.html">get-network-insights-access-scope-analysis-findings</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/start-network-insights-access-scope-analysis.html">start-network-insights-access-scope-analysis</a></p></li>
+</ul>
+</dd>
+<dt>network-insights-analysis:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-network-insights-analysis.html">delete-network-insights-analysis</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/start-network-insights-analysis.html">start-network-insights-analysis</a></p></li>
+</ul>
+</dd>
+<dt>queued-reserved:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-queued-reserved-instances.html">delete-queued-reserved-instances</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoint-connection-notifications:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-vpc-endpoint-connection-notifications.html">delete-vpc-endpoint-connection-notifications</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-endpoint-connection-notifications.html">describe-vpc-endpoint-connection-notifications</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoint-service-configurations:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-vpc-endpoint-service-configurations.html">delete-vpc-endpoint-service-configurations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-endpoint-service-configurations.html">describe-vpc-endpoint-service-configurations</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoints:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/delete-vpc-endpoints.html">delete-vpc-endpoints</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-endpoints.html">describe-vpc-endpoints</a></p></li>
+</ul>
+</dd>
+<dt>public-ipv4-pool-cidr:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/deprovision-public-ipv4-pool-cidr.html">deprovision-public-ipv4-pool-cidr</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/provision-public-ipv4-pool-cidr.html">provision-public-ipv4-pool-cidr</a></p></li>
+</ul>
+</dd>
+<dt>instance-event-notification-attributes:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/deregister-instance-event-notification-attributes.html">deregister-instance-event-notification-attributes</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instance-event-notification-attributes.html">describe-instance-event-notification-attributes</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/register-instance-event-notification-attributes.html">register-instance-event-notification-attributes</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-multicast-group-members:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/deregister-transit-gateway-multicast-group-members.html">deregister-transit-gateway-multicast-group-members</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/register-transit-gateway-multicast-group-members.html">register-transit-gateway-multicast-group-members</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-multicast-group-sources:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/deregister-transit-gateway-multicast-group-sources.html">deregister-transit-gateway-multicast-group-sources</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/register-transit-gateway-multicast-group-sources.html">register-transit-gateway-multicast-group-sources</a></p></li>
+</ul>
+</dd>
+<dt>account:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-account-attributes.html">describe-account-attributes</a></p></li>
+</ul>
+</dd>
+<dt>addresses:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-addresses.html">describe-addresses</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-addresses-attribute.html">describe-addresses-attribute</a></p></li>
+</ul>
+</dd>
+<dt>aggregate-id:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-aggregate-id-format.html">describe-aggregate-id-format</a></p></li>
+</ul>
+</dd>
+<dt>availability:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-availability-zones.html">describe-availability-zones</a></p></li>
+</ul>
+</dd>
+<dt>aws-network-performance-metric:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-aws-network-performance-metric-subscriptions.html">describe-aws-network-performance-metric-subscriptions</a></p></li>
+</ul>
+</dd>
+<dt>byoip:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-byoip-cidrs.html">describe-byoip-cidrs</a></p></li>
+</ul>
+</dd>
+<dt>capacity-block:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-capacity-block-offerings.html">describe-capacity-block-offerings</a></p></li>
+</ul>
+</dd>
+<dt>capacity:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-capacity-reservations.html">describe-capacity-reservations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/purchase-capacity-block.html">purchase-capacity-block</a></p></li>
+</ul>
+</dd>
+<dt>carrier:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-carrier-gateways.html">describe-carrier-gateways</a></p></li>
+</ul>
+</dd>
+<dt>classic-link:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-classic-link-instances.html">describe-classic-link-instances</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn-authorization:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-client-vpn-authorization-rules.html">describe-client-vpn-authorization-rules</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn-connections:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-client-vpn-connections.html">describe-client-vpn-connections</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/terminate-client-vpn-connections.html">terminate-client-vpn-connections</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-client-vpn-endpoints.html">describe-client-vpn-endpoints</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-client-vpn-routes.html">describe-client-vpn-routes</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn-target:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-client-vpn-target-networks.html">describe-client-vpn-target-networks</a></p></li>
+</ul>
+</dd>
+<dt>coip:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-coip-pools.html">describe-coip-pools</a></p></li>
+</ul>
+</dd>
+<dt>customer:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-customer-gateways.html">describe-customer-gateways</a></p></li>
+</ul>
+</dd>
+<dt>egress-only-internet:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-egress-only-internet-gateways.html">describe-egress-only-internet-gateways</a></p></li>
+</ul>
+</dd>
+<dt>elastic:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-elastic-gpus.html">describe-elastic-gpus</a></p></li>
+</ul>
+</dd>
+<dt>export-image:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-export-image-tasks.html">describe-export-image-tasks</a></p></li>
+</ul>
+</dd>
+<dt>export:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-export-tasks.html">describe-export-tasks</a></p></li>
+</ul>
+</dd>
+<dt>fast-launch:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-fast-launch-images.html">describe-fast-launch-images</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-fast-launch.html">disable-fast-launch</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-fast-launch.html">enable-fast-launch</a></p></li>
+</ul>
+</dd>
+<dt>fast-snapshot-restores:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-fast-snapshot-restores.html">describe-fast-snapshot-restores</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-fast-snapshot-restores.html">disable-fast-snapshot-restores</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-fast-snapshot-restores.html">enable-fast-snapshot-restores</a></p></li>
+</ul>
+</dd>
+<dt>fleet-instances:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-fleet-instances.html">describe-fleet-instances</a></p></li>
+</ul>
+</dd>
+<dt>fpga-image-attribute:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-fpga-image-attribute.html">describe-fpga-image-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-fpga-image-attribute.html">modify-fpga-image-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reset-fpga-image-attribute.html">reset-fpga-image-attribute</a></p></li>
+</ul>
+</dd>
+<dt>fpga:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-fpga-images.html">describe-fpga-images</a></p></li>
+</ul>
+</dd>
+<dt>host-reservation:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-host-reservation-offerings.html">describe-host-reservation-offerings</a></p></li>
+</ul>
+</dd>
+<dt>host:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-host-reservations.html">describe-host-reservations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/purchase-host-reservation.html">purchase-host-reservation</a></p></li>
+</ul>
+</dd>
+<dt>id-format:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-id-format.html">describe-id-format</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-id-format.html">modify-id-format</a></p></li>
+</ul>
+</dd>
+<dt>identity-id-format:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-identity-id-format.html">describe-identity-id-format</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-identity-id-format.html">modify-identity-id-format</a></p></li>
+</ul>
+</dd>
+<dt>image-attribute:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-image-attribute.html">describe-image-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-image-attribute.html">modify-image-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reset-image-attribute.html">reset-image-attribute</a></p></li>
+</ul>
+</dd>
+<dt>images:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-images.html">describe-images</a></p></li>
+</ul>
+</dd>
+<dt>import-image:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-import-image-tasks.html">describe-import-image-tasks</a></p></li>
+</ul>
+</dd>
+<dt>import-snapshot:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-import-snapshot-tasks.html">describe-import-snapshot-tasks</a></p></li>
+</ul>
+</dd>
+<dt>instance-attribute:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instance-attribute.html">describe-instance-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-instance-attribute.html">modify-instance-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reset-instance-attribute.html">reset-instance-attribute</a></p></li>
+</ul>
+</dd>
+<dt>instance-connect:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instance-connect-endpoints.html">describe-instance-connect-endpoints</a></p></li>
+</ul>
+</dd>
+<dt>instance-credit:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instance-credit-specifications.html">describe-instance-credit-specifications</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-instance-credit-specification.html">modify-instance-credit-specification</a></p></li>
+</ul>
+</dd>
+<dt>instance-event:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instance-event-windows.html">describe-instance-event-windows</a></p></li>
+</ul>
+</dd>
+<dt>instance-status:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instance-status.html">describe-instance-status</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/report-instance-status.html">report-instance-status</a></p></li>
+</ul>
+</dd>
+<dt>instance-type:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instance-type-offerings.html">describe-instance-type-offerings</a></p></li>
+</ul>
+</dd>
+<dt>instances:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-instances.html">describe-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/monitor-instances.html">monitor-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reboot-instances.html">reboot-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/run-instances.html">run-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/start-instances.html">start-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/stop-instances.html">stop-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/terminate-instances.html">terminate-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/unmonitor-instances.html">unmonitor-instances</a></p></li>
+</ul>
+</dd>
+<dt>internet-gateways:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-internet-gateways.html">describe-internet-gateways</a></p></li>
+</ul>
+</dd>
+<dt>ipam-external-resource-verification:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-ipam-external-resource-verification-tokens.html">describe-ipam-external-resource-verification-tokens</a></p></li>
+</ul>
+</dd>
+<dt>ipam-resource:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-ipam-resource-discoveries.html">describe-ipam-resource-discoveries</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-ipam-resource-cidrs.html">get-ipam-resource-cidrs</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-ipam-resource-cidr.html">modify-ipam-resource-cidr</a></p></li>
+</ul>
+</dd>
+<dt>ipams:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-ipams.html">describe-ipams</a></p></li>
+</ul>
+</dd>
+<dt>ipv6:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-ipv6-pools.html">describe-ipv6-pools</a></p></li>
+</ul>
+</dd>
+<dt>key:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-key-pairs.html">describe-key-pairs</a></p></li>
+</ul>
+</dd>
+<dt>launch:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-launch-templates.html">describe-launch-templates</a></p></li>
+</ul>
+</dd>
+<dt>local-gateway-route-table-virtual-interface-group:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-local-gateway-route-table-virtual-interface-group-associations.html">describe-local-gateway-route-table-virtual-interface-group-associations</a></p></li>
+</ul>
+</dd>
+<dt>local-gateway-route-table-vpc:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-local-gateway-route-table-vpc-associations.html">describe-local-gateway-route-table-vpc-associations</a></p></li>
+</ul>
+</dd>
+<dt>local-gateway-virtual-interface:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-local-gateway-virtual-interface-groups.html">describe-local-gateway-virtual-interface-groups</a></p></li>
+</ul>
+</dd>
+<dt>local-gateway-virtual:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-local-gateway-virtual-interfaces.html">describe-local-gateway-virtual-interfaces</a></p></li>
+</ul>
+</dd>
+<dt>local:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-local-gateways.html">describe-local-gateways</a></p></li>
+</ul>
+</dd>
+<dt>locked:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-locked-snapshots.html">describe-locked-snapshots</a></p></li>
+</ul>
+</dd>
+<dt>mac:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-mac-hosts.html">describe-mac-hosts</a></p></li>
+</ul>
+</dd>
+<dt>managed-prefix:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-managed-prefix-lists.html">describe-managed-prefix-lists</a></p></li>
+</ul>
+</dd>
+<dt>moving:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-moving-addresses.html">describe-moving-addresses</a></p></li>
+</ul>
+</dd>
+<dt>nat:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-nat-gateways.html">describe-nat-gateways</a></p></li>
+</ul>
+</dd>
+<dt>network:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-network-acls.html">describe-network-acls</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-network-interfaces.html">describe-network-interfaces</a></p></li>
+</ul>
+</dd>
+<dt>network-insights-access:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-network-insights-access-scopes.html">describe-network-insights-access-scopes</a></p></li>
+</ul>
+</dd>
+<dt>network-insights:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-network-insights-analyses.html">describe-network-insights-analyses</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-network-insights-paths.html">describe-network-insights-paths</a></p></li>
+</ul>
+</dd>
+<dt>network-interface-attribute:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-network-interface-attribute.html">describe-network-interface-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-network-interface-attribute.html">modify-network-interface-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reset-network-interface-attribute.html">reset-network-interface-attribute</a></p></li>
+</ul>
+</dd>
+<dt>placement:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-placement-groups.html">describe-placement-groups</a></p></li>
+</ul>
+</dd>
+<dt>prefix-lists:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-prefix-lists.html">describe-prefix-lists</a></p></li>
+</ul>
+</dd>
+<dt>principal-id:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-principal-id-format.html">describe-principal-id-format</a></p></li>
+</ul>
+</dd>
+<dt>public-ipv4:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-public-ipv4-pools.html">describe-public-ipv4-pools</a></p></li>
+</ul>
+</dd>
+<dt>regions:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-regions.html">describe-regions</a></p></li>
+</ul>
+</dd>
+<dt>reserved-instances:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-reserved-instances.html">describe-reserved-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-reserved-instances-listings.html">describe-reserved-instances-listings</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-reserved-instances-modifications.html">describe-reserved-instances-modifications</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-reserved-instances-offerings.html">describe-reserved-instances-offerings</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-reserved-instances.html">modify-reserved-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/purchase-reserved-instances-offering.html">purchase-reserved-instances-offering</a></p></li>
+</ul>
+</dd>
+<dt>route-tables:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-route-tables.html">describe-route-tables</a></p></li>
+</ul>
+</dd>
+<dt>scheduled-instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-scheduled-instance-availability.html">describe-scheduled-instance-availability</a></p></li>
+</ul>
+</dd>
+<dt>scheduled-instances:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-scheduled-instances.html">describe-scheduled-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/purchase-scheduled-instances.html">purchase-scheduled-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/run-scheduled-instances.html">run-scheduled-instances</a></p></li>
+</ul>
+</dd>
+<dt>security-group-rules:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-security-group-rules.html">describe-security-group-rules</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-security-group-rules.html">modify-security-group-rules</a></p></li>
+</ul>
+</dd>
+<dt>security-groups:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-security-groups.html">describe-security-groups</a></p></li>
+</ul>
+</dd>
+<dt>snapshot-attribute:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-snapshot-attribute.html">describe-snapshot-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-snapshot-attribute.html">modify-snapshot-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reset-snapshot-attribute.html">reset-snapshot-attribute</a></p></li>
+</ul>
+</dd>
+<dt>snapshot-tier:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-snapshot-tier-status.html">describe-snapshot-tier-status</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-snapshot-tier.html">modify-snapshot-tier</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/restore-snapshot-tier.html">restore-snapshot-tier</a></p></li>
+</ul>
+</dd>
+<dt>spot-fleet:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-spot-fleet-instances.html">describe-spot-fleet-instances</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-spot-fleet-request.html">modify-spot-fleet-request</a></p></li>
+</ul>
+</dd>
+<dt>spot-fleet-request:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-spot-fleet-request-history.html">describe-spot-fleet-request-history</a></p></li>
+</ul>
+</dd>
+<dt>spot-price:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-spot-price-history.html">describe-spot-price-history</a></p></li>
+</ul>
+</dd>
+<dt>stale-security:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-stale-security-groups.html">describe-stale-security-groups</a></p></li>
+</ul>
+</dd>
+<dt>store-image:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-store-image-tasks.html">describe-store-image-tasks</a></p></li>
+</ul>
+</dd>
+<dt>subnets:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-subnets.html">describe-subnets</a></p></li>
+</ul>
+</dd>
+<dt>traffic-mirror:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-traffic-mirror-filters.html">describe-traffic-mirror-filters</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-traffic-mirror-sessions.html">describe-traffic-mirror-sessions</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-traffic-mirror-targets.html">describe-traffic-mirror-targets</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-multicast:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateway-multicast-domains.html">describe-transit-gateway-multicast-domains</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/search-transit-gateway-multicast-groups.html">search-transit-gateway-multicast-groups</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-peering:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateway-peering-attachments.html">describe-transit-gateway-peering-attachments</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateway-policy-tables.html">describe-transit-gateway-policy-tables</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-vpc:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateway-vpc-attachments.html">describe-transit-gateway-vpc-attachments</a></p></li>
+</ul>
+</dd>
+<dt>transit:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-transit-gateways.html">describe-transit-gateways</a></p></li>
+</ul>
+</dd>
+<dt>verified-access:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-verified-access-endpoints.html">describe-verified-access-endpoints</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-verified-access-groups.html">describe-verified-access-groups</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-verified-access-instances.html">describe-verified-access-instances</a></p></li>
+</ul>
+</dd>
+<dt>verified-access-instance-logging:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-verified-access-instance-logging-configurations.html">describe-verified-access-instance-logging-configurations</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-verified-access-instance-logging-configuration.html">modify-verified-access-instance-logging-configuration</a></p></li>
+</ul>
+</dd>
+<dt>verified-access-trust:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-verified-access-trust-providers.html">describe-verified-access-trust-providers</a></p></li>
+</ul>
+</dd>
+<dt>volume-attribute:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-volume-attribute.html">describe-volume-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-volume-attribute.html">modify-volume-attribute</a></p></li>
+</ul>
+</dd>
+<dt>volumes:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-volumes.html">describe-volumes</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-volumes-modifications.html">describe-volumes-modifications</a></p></li>
+</ul>
+</dd>
+<dt>vpc-attribute:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-attribute.html">describe-vpc-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpc-attribute.html">modify-vpc-attribute</a></p></li>
+</ul>
+</dd>
+<dt>vpc-classic-link:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-classic-link.html">describe-vpc-classic-link</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-vpc-classic-link.html">disable-vpc-classic-link</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-vpc-classic-link.html">enable-vpc-classic-link</a></p></li>
+</ul>
+</dd>
+<dt>vpc-classic-link-dns-support:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-classic-link-dns-support.html">describe-vpc-classic-link-dns-support</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-vpc-classic-link-dns-support.html">disable-vpc-classic-link-dns-support</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-vpc-classic-link-dns-support.html">enable-vpc-classic-link-dns-support</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoint-service-permissions:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-endpoint-service-permissions.html">describe-vpc-endpoint-service-permissions</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpc-endpoint-service-permissions.html">modify-vpc-endpoint-service-permissions</a></p></li>
+</ul>
+</dd>
+<dt>vpc-peering:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpc-peering-connections.html">describe-vpc-peering-connections</a></p></li>
+</ul>
+</dd>
+<dt>vpcs:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpcs.html">describe-vpcs</a></p></li>
+</ul>
+</dd>
+<dt>vpn-connections:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpn-connections.html">describe-vpn-connections</a></p></li>
+</ul>
+</dd>
+<dt>vpn:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-vpn-gateways.html">describe-vpn-gateways</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/replace-vpn-tunnel.html">replace-vpn-tunnel</a></p></li>
+</ul>
+</dd>
+<dt>aws-network-performance-metric-subscription:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-aws-network-performance-metric-subscription.html">disable-aws-network-performance-metric-subscription</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-aws-network-performance-metric-subscription.html">enable-aws-network-performance-metric-subscription</a></p></li>
+</ul>
+</dd>
+<dt>ebs-encryption-by-default:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-ebs-encryption-by-default.html">disable-ebs-encryption-by-default</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-ebs-encryption-by-default.html">enable-ebs-encryption-by-default</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-ebs-encryption-by-default.html">get-ebs-encryption-by-default</a></p></li>
+</ul>
+</dd>
+<dt>image-block-public-access:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-image-block-public-access.html">disable-image-block-public-access</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-image-block-public-access.html">enable-image-block-public-access</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-image-block-public-access-state.html">get-image-block-public-access-state</a></p></li>
+</ul>
+</dd>
+<dt>image-deprecation:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-image-deprecation.html">disable-image-deprecation</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-image-deprecation.html">enable-image-deprecation</a></p></li>
+</ul>
+</dd>
+<dt>image-deregistration-protection:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-image-deregistration-protection.html">disable-image-deregistration-protection</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-image-deregistration-protection.html">enable-image-deregistration-protection</a></p></li>
+</ul>
+</dd>
+<dt>ipam-organization-admin-account:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-ipam-organization-admin-account.html">disable-ipam-organization-admin-account</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-ipam-organization-admin-account.html">enable-ipam-organization-admin-account</a></p></li>
+</ul>
+</dd>
+<dt>serial-console-access:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-serial-console-access.html">disable-serial-console-access</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-serial-console-access.html">enable-serial-console-access</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-serial-console-access-status.html">get-serial-console-access-status</a></p></li>
+</ul>
+</dd>
+<dt>snapshot-block-public-access:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-snapshot-block-public-access.html">disable-snapshot-block-public-access</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-snapshot-block-public-access.html">enable-snapshot-block-public-access</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-snapshot-block-public-access-state.html">get-snapshot-block-public-access-state</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-route-table-propagation:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-transit-gateway-route-table-propagation.html">disable-transit-gateway-route-table-propagation</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-transit-gateway-route-table-propagation.html">enable-transit-gateway-route-table-propagation</a></p></li>
+</ul>
+</dd>
+<dt>vgw-route-propagation:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/disable-vgw-route-propagation.html">disable-vgw-route-propagation</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-vgw-route-propagation.html">enable-vgw-route-propagation</a></p></li>
+</ul>
+</dd>
+<dt>reachability-analyzer-organization:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/enable-reachability-analyzer-organization-sharing.html">enable-reachability-analyzer-organization-sharing</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn-client-certificate-revocation-list:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/export-client-vpn-client-certificate-revocation-list.html">export-client-vpn-client-certificate-revocation-list</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/import-client-vpn-client-certificate-revocation-list.html">import-client-vpn-client-certificate-revocation-list</a></p></li>
+</ul>
+</dd>
+<dt>client-vpn-client:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/export-client-vpn-client-configuration.html">export-client-vpn-client-configuration</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-routes:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/export-transit-gateway-routes.html">export-transit-gateway-routes</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/search-transit-gateway-routes.html">search-transit-gateway-routes</a></p></li>
+</ul>
+</dd>
+<dt>associated-enclave-certificate-iam:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-associated-enclave-certificate-iam-roles.html">get-associated-enclave-certificate-iam-roles</a></p></li>
+</ul>
+</dd>
+<dt>associated-ipv6-pool:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-associated-ipv6-pool-cidrs.html">get-associated-ipv6-pool-cidrs</a></p></li>
+</ul>
+</dd>
+<dt>aws-network-performance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-aws-network-performance-data.html">get-aws-network-performance-data</a></p></li>
+</ul>
+</dd>
+<dt>console:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-console-output.html">get-console-output</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-console-screenshot.html">get-console-screenshot</a></p></li>
+</ul>
+</dd>
+<dt>default-credit-specification:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-default-credit-specification.html">get-default-credit-specification</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-default-credit-specification.html">modify-default-credit-specification</a></p></li>
+</ul>
+</dd>
+<dt>ebs-default-kms-key-id:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-ebs-default-kms-key-id.html">get-ebs-default-kms-key-id</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-ebs-default-kms-key-id.html">modify-ebs-default-kms-key-id</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reset-ebs-default-kms-key-id.html">reset-ebs-default-kms-key-id</a></p></li>
+</ul>
+</dd>
+<dt>flow-logs-integration:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-flow-logs-integration-template.html">get-flow-logs-integration-template</a></p></li>
+</ul>
+</dd>
+<dt>groups-for-capacity:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-groups-for-capacity-reservation.html">get-groups-for-capacity-reservation</a></p></li>
+</ul>
+</dd>
+<dt>host-reservation-purchase:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-host-reservation-purchase-preview.html">get-host-reservation-purchase-preview</a></p></li>
+</ul>
+</dd>
+<dt>instance-metadata-defaults:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-instance-metadata-defaults.html">get-instance-metadata-defaults</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-instance-metadata-defaults.html">modify-instance-metadata-defaults</a></p></li>
+</ul>
+</dd>
+<dt>instance-tpm-ek:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-instance-tpm-ek-pub.html">get-instance-tpm-ek-pub</a></p></li>
+</ul>
+</dd>
+<dt>instance-types-from-instance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-instance-types-from-instance-requirements.html">get-instance-types-from-instance-requirements</a></p></li>
+</ul>
+</dd>
+<dt>instance-uefi:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-instance-uefi-data.html">get-instance-uefi-data</a></p></li>
+</ul>
+</dd>
+<dt>ipam-address:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-ipam-address-history.html">get-ipam-address-history</a></p></li>
+</ul>
+</dd>
+<dt>ipam-discovered:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-ipam-discovered-accounts.html">get-ipam-discovered-accounts</a></p></li>
+</ul>
+</dd>
+<dt>ipam-discovered-public:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-ipam-discovered-public-addresses.html">get-ipam-discovered-public-addresses</a></p></li>
+</ul>
+</dd>
+<dt>ipam-discovered-resource:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-ipam-discovered-resource-cidrs.html">get-ipam-discovered-resource-cidrs</a></p></li>
+</ul>
+</dd>
+<dt>password:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-password-data.html">get-password-data</a></p></li>
+</ul>
+</dd>
+<dt>security-groups-for:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-security-groups-for-vpc.html">get-security-groups-for-vpc</a></p></li>
+</ul>
+</dd>
+<dt>spot-placement:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-spot-placement-scores.html">get-spot-placement-scores</a></p></li>
+</ul>
+</dd>
+<dt>subnet-cidr:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-subnet-cidr-reservations.html">get-subnet-cidr-reservations</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-attachment:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-transit-gateway-attachment-propagations.html">get-transit-gateway-attachment-propagations</a></p></li>
+</ul>
+</dd>
+<dt>transit-gateway-prefix-list:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-transit-gateway-prefix-list-references.html">get-transit-gateway-prefix-list-references</a></p></li>
+</ul>
+</dd>
+<dt>verified-access-endpoint-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-verified-access-endpoint-policy.html">get-verified-access-endpoint-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-verified-access-endpoint-policy.html">modify-verified-access-endpoint-policy</a></p></li>
+</ul>
+</dd>
+<dt>verified-access-group-policy:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-verified-access-group-policy.html">get-verified-access-group-policy</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-verified-access-group-policy.html">modify-verified-access-group-policy</a></p></li>
+</ul>
+</dd>
+<dt>vpn-connection-device-sample:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-vpn-connection-device-sample-configuration.html">get-vpn-connection-device-sample-configuration</a></p></li>
+</ul>
+</dd>
+<dt>vpn-connection-device:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-vpn-connection-device-types.html">get-vpn-connection-device-types</a></p></li>
+</ul>
+</dd>
+<dt>vpn-tunnel-replacement:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/get-vpn-tunnel-replacement-status.html">get-vpn-tunnel-replacement-status</a></p></li>
+</ul>
+</dd>
+<dt>images-in-recycle:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/list-images-in-recycle-bin.html">list-images-in-recycle-bin</a></p></li>
+</ul>
+</dd>
+<dt>snapshots-in-recycle:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/list-snapshots-in-recycle-bin.html">list-snapshots-in-recycle-bin</a></p></li>
+</ul>
+</dd>
+<dt>address-attribute:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-address-attribute.html">modify-address-attribute</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/reset-address-attribute.html">reset-address-attribute</a></p></li>
+</ul>
+</dd>
+<dt>availability-zone:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-availability-zone-group.html">modify-availability-zone-group</a></p></li>
+</ul>
+</dd>
+<dt>instance-capacity-reservation:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-instance-capacity-reservation-attributes.html">modify-instance-capacity-reservation-attributes</a></p></li>
+</ul>
+</dd>
+<dt>instance-event-start:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-instance-event-start-time.html">modify-instance-event-start-time</a></p></li>
+</ul>
+</dd>
+<dt>instance-maintenance:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-instance-maintenance-options.html">modify-instance-maintenance-options</a></p></li>
+</ul>
+</dd>
+<dt>instance-metadata:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-instance-metadata-options.html">modify-instance-metadata-options</a></p></li>
+</ul>
+</dd>
+<dt>private-dns-name:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-private-dns-name-options.html">modify-private-dns-name-options</a></p></li>
+</ul>
+</dd>
+<dt>traffic-mirror-filter-network:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-traffic-mirror-filter-network-services.html">modify-traffic-mirror-filter-network-services</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoint-service-payer:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpc-endpoint-service-payer-responsibility.html">modify-vpc-endpoint-service-payer-responsibility</a></p></li>
+</ul>
+</dd>
+<dt>vpn-tunnel:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpn-tunnel-certificate.html">modify-vpn-tunnel-certificate</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-vpn-tunnel-options.html">modify-vpn-tunnel-options</a></p></li>
+</ul>
+</dd>
+<dt>address-to:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/move-address-to-vpc.html">move-address-to-vpc</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/restore-address-to-classic.html">restore-address-to-classic</a></p></li>
+</ul>
+</dd>
+<dt>byoip-cidr-to:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/move-byoip-cidr-to-ipam.html">move-byoip-cidr-to-ipam</a></p></li>
+</ul>
+</dd>
+<dt>spot:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/request-spot-fleet.html">request-spot-fleet</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/request-spot-instances.html">request-spot-instances</a></p></li>
+</ul>
+</dd>
+<dt>image-from-recycle:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/restore-image-from-recycle-bin.html">restore-image-from-recycle-bin</a></p></li>
+</ul>
+</dd>
+<dt>snapshot-from-recycle:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/restore-snapshot-from-recycle-bin.html">restore-snapshot-from-recycle-bin</a></p></li>
+</ul>
+</dd>
+<dt>local-gateway:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/search-local-gateway-routes.html">search-local-gateway-routes</a></p></li>
+</ul>
+</dd>
+<dt>diagnostic:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/send-diagnostic-interrupt.html">send-diagnostic-interrupt</a></p></li>
+</ul>
+</dd>
+<dt>vpc-endpoint-service-private-dns:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/start-vpc-endpoint-service-private-dns-verification.html">start-vpc-endpoint-service-private-dns-verification</a></p></li>
+</ul>
+</dd>
+<dt>security-group-rule-descriptions:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/update-security-group-rule-descriptions-egress.html">update-security-group-rule-descriptions-egress</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/update-security-group-rule-descriptions-ingress.html">update-security-group-rule-descriptions-ingress</a></p></li>
+<li><p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/wait.html">wait</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="source">
+<h2>Source<a class="headerlink" href="#source" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/index.html">https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/index.html</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../001_Guide/index.html" class="btn btn-neutral float-left" title="Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../lambda/index.html" class="btn btn-neutral float-right" title="lambda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

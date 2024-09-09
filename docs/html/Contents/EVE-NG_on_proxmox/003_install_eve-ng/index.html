@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deploy EVE-NG &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="F5" href="../../F5/BIG-IP/index.html" />
+    <link rel="prev" title="Snapshot" href="../002_proxmox_snapshot/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../AWS/index.html">AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">EVE-NG構築</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../001_install_proxmox-ve/index.html">Install Proxmox-VE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../002_proxmox_snapshot/index.html">Snapshot</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Deploy EVE-NG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">0. はじめに</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iso">1. ISOダウンロード</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#proxmoxvm">2. Proxmox上でVMを作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eve-ng">3. EVE-NGのインストール</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">EVE-NG構築</a></li>
+      <li class="breadcrumb-item active">Deploy EVE-NG</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/Contents/EVE-NG_on_proxmox/003_install_eve-ng/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deploy-eve-ng">
+<h1>Deploy EVE-NG<a class="headerlink" href="#deploy-eve-ng" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>0. はじめに<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>前回構築したproxmox上にEVE-NGのVMを建てます。<br />
+私は主にCCIE用に使用しており、メモリを50GB程度割り振ればDNACを除いたフルラボ構成で十分使用できるかと思います。<br />
+また、IOS以外にもJuniperやfortinet等の各種ベンダOSが動作するので、普段の業務での確認にも使いやすいかと思います。</p>
+<p><br><br></p>
+</section>
+<section id="iso">
+<h2>1. ISOダウンロード<a class="headerlink" href="#iso" title="Link to this heading"></a></h2>
+<p>ここからeve-ngのISOイメージをダウンロードします。</p>
+<p><a class="reference external" href="https://www.eve-ng.net/index.php/download/">https://www.eve-ng.net/index.php/download/</a>
+<img alt="" src="../../../_images/image-35-1024x577.png" /></p>
+<p><br><br></p>
+</section>
+<section id="proxmoxvm">
+<h2>2. Proxmox上でVMを作成<a class="headerlink" href="#proxmoxvm" title="Link to this heading"></a></h2>
+<p>次にproxmox側で管理画面右上の「VMを作成」をクリックし、VMを作成します。</p>
+<p><img alt="" src="../../../_images/image-25-1024x239.png" /></p>
+<p>VMの名前を入力します。</p>
+<p><img alt="" src="../../../_images/image-271.png" /></p>
+<p>ダウンロードしてきたISOイメージを選択します。</p>
+<p><img alt="" src="../../../_images/image-281.png" /></p>
+<p>管理画面上から リモートでVMをshutdownできるように、Qemuエージェントを追加します。</p>
+<p><img alt="" src="../../../_images/image-291.png" /></p>
+<p>VMが使用するストレージとサイズを選択します。</p>
+<p><img alt="" src="../../../_images/image-301.png" /></p>
+<p>使用するCPUのコア数を選択します。<br />
+また、EVE-NGではネストされた仮想環境になるので種別をhostにします。</p>
+<p><img alt="" src="../../../_images/image-314.png" /></p>
+<p>使用するメモリサイズを指定します。</p>
+<p><img alt="" src="../../../_images/image-321.png" /></p>
+<p>ネットワークの設定はデフォルトのブリッジを使用します。</p>
+<p><img alt="" src="../../../_images/image-331.png" /></p>
+<p>nested virtualizationを有効にします。<br />
+proxmoxホスト上で、シェルを開きます。</p>
+<p><img alt="" src="../../../_images/image-47-1024x267.png" /></p>
+<p>シェル上で、以下コマンドでnestedが有効かどうか確認します。デフォルトで有効だと思います。</p>
+<p>・Intel CPUの場合(有効ならY)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">module</span><span class="o">/</span><span class="n">kvm_intel</span><span class="o">/</span><span class="n">parameters</span><span class="o">/</span><span class="n">nested</span>
+</pre></div>
+</div>
+<p>・amd CPUの場合(有効なら1)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">module</span><span class="o">/</span><span class="n">kvm_amd</span><span class="o">/</span><span class="n">parameters</span><span class="o">/</span><span class="n">nested</span>
+</pre></div>
+</div>
+<p>以下コマンドでcpu typeを固定します。vmidはproxmox管理画面上のVM名の左に記載されている番号になります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qm</span> <span class="nb">set</span> <span class="o">&lt;</span><span class="n">vmid</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">cpu</span> <span class="n">host</span>
+</pre></div>
+</div>
+<p><img alt="" src="../../../_images/image-49.png" /></p>
+<p><br><br></p>
+</section>
+<section id="eve-ng">
+<h2>3. EVE-NGのインストール<a class="headerlink" href="#eve-ng" title="Link to this heading"></a></h2>
+<p>作成したVMを起動し、EVE-NGのインストールを進めていきます。</p>
+<p><img alt="" src="../../../_images/image-34-1024x422.png" /></p>
+<p>デフォルトのままDone。</p>
+<p><img alt="" src="../../../_images/image-36-1024x765.png" /></p>
+<p>VM作成時にブリッジを選択しているので、今回はproxmoxと同セグメントにします。</p>
+<p><img alt="" src="../../../_images/image-37-1024x779.png" /></p>
+<p>今回はproxyを使用しないので、そのままDone。</p>
+<p><img alt="" src="../../../_images/image-381.png" /></p>
+<p>Continueを選択。</p>
+<p><img alt="" src="../../../_images/image-391.png" /></p>
+<p>Install completeとなったら、proxmox上で作成したVMのISOドライブを解除します。<br />
+CD/DVDドライブをダブルクリックし、メディアを使用しないを選択。</p>
+<p><img alt="" src="../../../_images/image-55.png" />
+<img alt="" src="../../../_images/image-45.png" /></p>
+<p>VMに戻り、Reboot Nowで再起動します。</p>
+<p><img alt="" src="../../../_images/image-40-1024x779.png" /></p>
+<p>再起動後、root/eveでログインします。<br />
+初期ログイン後はsetup画面が表示されます。</p>
+<p><img alt="" src="../../../_images/image-50-1024x449.png" /></p>
+<p>eve-ngに実際にログインするIPを設定します。<br />
+今回はDHCPにしますが、固定で振りたい場合はstaticを選択します。</p>
+<p><img alt="" src="../../../_images/image-511.png" /></p>
+<p>proxyを使用しないのでdirect connectionにします。</p>
+<p><img alt="" src="../../../_images/image-521.png" /></p>
+<p>設定完了後、起動するとhttp://&lt;設定したIP&gt;/ が表示されるので、ブラウザに入力しログイン。</p>
+<p><img alt="" src="../../../_images/image-531.png" /></p>
+<p>admin/eveでログインできます。</p>
+<p><img alt="" src="../../../_images/image-541.png" /></p>
+<p>このままだと、proxmox上からshutdownが出来ないので、eve-ngのCLI上でqemu-guest-agentをインストールします。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">update</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">qemu</span><span class="o">-</span><span class="n">guest</span><span class="o">-</span><span class="n">agent</span>
+</pre></div>
+</div>
+<p>以上になります。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../002_proxmox_snapshot/index.html" class="btn btn-neutral float-left" title="Snapshot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../F5/BIG-IP/index.html" class="btn btn-neutral float-right" title="F5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

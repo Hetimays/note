@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Install Proxmox-VE &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="Snapshot" href="../002_proxmox_snapshot/index.html" />
+    <link rel="prev" title="EVE-NG構築" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../AWS/index.html">AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">EVE-NG構築</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Install Proxmox-VE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">0. はじめに</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pc">1. ミニPCの初期設定</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#secure-boot">1.1 Secure Bootの無効化</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2. インストールメディアの準備</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#iso">2.1 ISOのダウンロード</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb">2.2 USBメモリに書き込み</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proxmox-ve">2.3 Proxmox VEのインストール</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../002_proxmox_snapshot/index.html">Snapshot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../003_install_eve-ng/index.html">Deploy EVE-NG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">EVE-NG構築</a></li>
+      <li class="breadcrumb-item active">Install Proxmox-VE</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/Contents/EVE-NG_on_proxmox/001_install_proxmox-ve/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="install-proxmox-ve">
+<h1>Install Proxmox-VE<a class="headerlink" href="#install-proxmox-ve" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>0. はじめに<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>メインのタワー型PCで仮想環境を用意していたのですが、グラボを積んでいたりで電気代が高い。。。<br />
+そこで、今回はミニPCを使って仮想環境を用意することに。<br />
+ある程度性能は欲しいので、コスパの良さそうな<a class="reference external" href="https://www.amazon.co.jp/gp/product/B0CCV42VC4">UM773 Lite</a>をポチりました。</p>
+<p>ハイパバイザはESXIを使用していたのですが、VMwareが買収されライセンスがサブスクになってしまったこともあり、VMとコンテナ両方を作成できるProxmoxで構築していきます。</p>
+<p><br><br></p>
+</section>
+<section id="pc">
+<h2>1. ミニPCの初期設定<a class="headerlink" href="#pc" title="Link to this heading"></a></h2>
+<p>今回土台にするUM773 Liteですが、初期のBIOSは不具合が多かったのでアップデートをします。<br />
+（お決まりですが、BIOSアップデートについては自己責任で）</p>
+<section id="secure-boot">
+<h3>1.1 Secure Bootの無効化<a class="headerlink" href="#secure-boot" title="Link to this heading"></a></h3>
+<p>Secure Bootを無効化します。これは後述のProxmoxのインストールから始める場合でも必要になります。<br />
+まず、ミニPCの起動時にDeleteキーを押してBIOS画面に入り、以下項目を<strong>Disable</strong>にします。<br />
+<code class="docutils literal notranslate"><span class="pre">Security</span> <span class="pre">&gt;</span> <span class="pre">Secure</span> <span class="pre">Boot</span> <span class="pre">&gt;</span> <span class="pre">Secure</span> <span class="pre">Boot</span></code></p>
+<p>次に、初期でインストールされていたWindowsで通常起動し、<br />
+以下リンクの「update_BIOS_for_windows_Step」をダウンロード。<br />
+ダウンロードしたファイルを<strong>管理者権限</strong>で実行します。</p>
+<p><a class="reference external" href="https://www.minisforum.com/new/support?lang=en#/support/page/download/34">https://www.minisforum.com/new/support?lang=en#/support/page/download/34</a>
+<img alt="" src="../../../_images/image-8-1024x598.png" /></p>
+<p>あとは勝手にアップデートが入り起動します。</p>
+<p><br><br></p>
+</section>
+</section>
+<section id="id2">
+<h2>2. インストールメディアの準備<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>ここからが本題ですが、Proxmox公式のこちらを参考に進めていきます。<br />
+<a class="reference external" href="https://pve.proxmox.com/pve-docs/chapter-pve-installation.html">https://pve.proxmox.com/pve-docs/chapter-pve-installation.html</a></p>
+<section id="iso">
+<h3>2.1 ISOのダウンロード<a class="headerlink" href="#iso" title="Link to this heading"></a></h3>
+<p>以下リンクから最新のISOをダウンロードします。</p>
+<p><a class="reference external" href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso</a>
+<img alt="" src="../../../_images/image-4-1024x373.png" /></p>
+</section>
+<section id="usb">
+<h3>2.2 USBメモリに書き込み<a class="headerlink" href="#usb" title="Link to this heading"></a></h3>
+<p>Etcherを使用してダウンロードしたISOをUSBメモリに書き込みます。<br />
+以下リンクからポータブル版をダウンロードします。</p>
+<p><a class="reference external" href="https://etcher.balena.io/#download-etcher">https://etcher.balena.io/#download-etcher</a>
+<img alt="" src="../../../_images/image-114.png" /></p>
+<p>先程ダウンロードしたISOファイルとUSBメモリを指定しFlashをクリックするとインストールメディアが完成します。
+<img alt="" src="../../../_images/image-122.png" /></p>
+</section>
+<section id="proxmox-ve">
+<h3>2.3 Proxmox VEのインストール<a class="headerlink" href="#proxmox-ve" title="Link to this heading"></a></h3>
+<p>PCに先程作成したUSBメモリを接続し起動します。<br />
+BIOS画面に入り以下で <strong>Boot Option #1</strong> にUSBメモリを指定しsave&amp;exit<br />
+（私の場合は調子が悪くBoot順が反映されなかったので、Boot overrideで直接USBメモリを指定し起動しました。）</p>
+<p><code class="docutils literal notranslate"><span class="pre">Boot</span> <span class="pre">&gt;</span> <span class="pre">Boot</span> <span class="pre">Option</span> <span class="pre">Priorites</span></code></p>
+<p>再起動後インストール画面が表示されるので<strong>Install Proxmox VR (Graphical)</strong> を指定。
+<img alt="" src="../../../_images/image-103.png" /></p>
+<p>インストールは淡々と進めていけば良いです。<br />
+Emailは適当で大丈夫です。Hostname (FQDN) はProxmox上で管理するノード名になるので、クラスタを組む場合はあとを考えて命名すると良いです。</p>
+<p>最後に設定内容を確認し、問題なければInstallをクリック。
+<img alt="" src="../../../_images/image-18-1024x693.png" /></p>
+<p>インストールが完了すると、CLI上でログインIPが表示されるのでブラウザからアクセスします。
+<img alt="" src="../../../_images/image-201.png" /></p>
+<p>証明書エラーが出るので、無視してアクセス。
+<img alt="" src="../../../_images/image-221.png" /></p>
+<p>アクセス後、ログインを求められるので以下でログイン。<br />
+Language：日本語<br />
+ユーザ名：root<br />
+パスワード：&lt;インストール時に設定したもの&gt;</p>
+<p><img alt="" src="../../../_images/image-231.png" />
+<img alt="" src="../../../_images/image-24-1024x706.png" /></p>
+<p>以上です。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="EVE-NG構築" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../002_proxmox_snapshot/index.html" class="btn btn-neutral float-right" title="Snapshot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTTPS Redirect &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="Loadbalancing" href="../004_Load_Balancing/index.html" />
+    <link rel="prev" title="SSL Offloading" href="../002_SSL_Offloading/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../AWS/index.html">AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Citrix</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../001_setup/index.html">Deploy on EVE-NG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../002_SSL_Offloading/index.html">SSL Offloading</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">HTTPS Redirect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">0. はじめに</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vpx">1. VPXの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2. 確認</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../004_Load_Balancing/index.html">Loadbalancing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../005_Persistence/index.html">Parsistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../006_Content_Switching/index.html">Contents Switching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../EVE-NG_on_proxmox/index.html">EVE-NG構築</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Citrix</a></li>
+      <li class="breadcrumb-item active">HTTPS Redirect</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/Contents/Citrix/Citrix_ADC_VPX/003_redirect_http_to_https/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="https-redirect">
+<h1>HTTPS Redirect<a class="headerlink" href="#https-redirect" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>0. はじめに<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>vServerのvip宛にHTTPでアクセスがあった場合に、HTTPSにリダイレクトする設定を確認します。</p>
+<p><strong>参考：</strong>
+<a class="reference external" href="https://docs.netscaler.com/ja-jp/citrix-adc/current-release/appexpert/responder/how-to-redirect-HTTP-requests-HTTPS-using-responder.html">レスポンダーを使用して HTTP リクエストを HTTPS にリダイレクトする方法</a></p>
+<p><br><br></p>
+</section>
+<section id="vpx">
+<h2>1. VPXの設定<a class="headerlink" href="#vpx" title="Link to this heading"></a></h2>
+<p>まず、レスポンダー機能を有効にします。<br />
+<code class="docutils literal notranslate"><span class="pre">System</span> <span class="pre">&gt;</span> <span class="pre">Settings</span></code><br />
+<img alt="system1" src="../../../../_images/image2.png" /></p>
+<p>レスポンダーアクションを設定します。<br />
+後述のレスポンダーポリシーにmatchしたトラフィックに対して行う操作を定義します。<br />
+ここで設定している内容は、URLのプロトコル以降をそのままに、プロトコルだけを <strong>https://</strong> に置き換えています。<br />
+<code class="docutils literal notranslate"><span class="pre">AppExpert</span> <span class="pre">&gt;</span> <span class="pre">Responder</span> <span class="pre">&gt;</span> <span class="pre">Actions</span></code><br />
+<img alt="responder1" src="../../../../_images/image-110.png" /></p>
+<p>レスポンダーポリシーにはHTTPリクエストパケットがmatchするように設定します。<br />
+なお、version13.1にはGUIだと設定できないバグがあるみたいなので、14.1以降を使用するか、CLIで設定してください。<br />
+<code class="docutils literal notranslate"><span class="pre">AppExpert</span> <span class="pre">&gt;</span> <span class="pre">Responder</span> <span class="pre">&gt;</span> <span class="pre">Policies</span></code><br />
+<img alt="responder2" src="../../../../_images/image-211.png" /></p>
+<p>HTTPを受けるvServerはリダイレクト処理を行うため常にUPしている必要があります。<br />
+また、HTTPでアクセスしてきたパケットはサーバ側へルーティングしてはいけません。<br />
+そこで、自身のloopbackを宛先にしたモニタを設定し、それを紐づけたServiceを定義します。<br />
+vServerには常にUPになるように設定したServiceをbindします。<br />
+<code class="docutils literal notranslate"><span class="pre">Traffic</span> <span class="pre">Management</span> <span class="pre">&gt;</span> <span class="pre">Load</span> <span class="pre">Balancing</span> <span class="pre">&gt;</span> <span class="pre">Monitors</span></code><br />
+<img alt="monitor1" src="../../../../_images/image-311.png" /></p>
+<p>Serviceに設定するIPはどこにも使われていないIPを指定します。<br />
+Monitorsには先程定義したモニタを指定します。<br />
+<code class="docutils literal notranslate"><span class="pre">Traffic</span> <span class="pre">Management</span> <span class="pre">&gt;</span> <span class="pre">Load</span> <span class="pre">Balancing</span> <span class="pre">&gt;</span> <span class="pre">Services</span></code><br />
+<img alt="service1" src="../../../../_images/image-42.png" />
+<img alt="service2" src="../../../../_images/image-52.png" /></p>
+<p>vServerのプロトコルはHTTP、リダイレクト先のHTTPSに対応するvServerと同じIPにします。<br />
+<code class="docutils literal notranslate"><span class="pre">Traffic</span> <span class="pre">Management</span> <span class="pre">&gt;</span> <span class="pre">Load</span> <span class="pre">Balancing</span> <span class="pre">&gt;</span> <span class="pre">Virtual</span> <span class="pre">Servers</span></code><br />
+<img alt="vs1" src="../../../../_images/image-61.png" /></p>
+<p>定義したレスポンダーをvServerに紐づけます。<br />
+<img alt="vs2" src="../../../../_images/image-71.png" />
+<img alt="vs3" src="../../../../_images/image-81.png" /></p>
+<p><br><br></p>
+</section>
+<section id="id2">
+<h2>2. 確認<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>SSLで受けるvServerに合わせたweb serverを起動します。<br />
+<code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">HTTP.server</span> <span class="pre">8080</span></code></p>
+<p>クライアント側のブラウザからHTTPでアクセスするとHTTPSにリダイレクトされていることが確認できました。
+<img alt="client2" src="../../../../_images/image-92.png" />
+<img alt="client1" src="../../../../_images/image-102.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../002_SSL_Offloading/index.html" class="btn btn-neutral float-left" title="SSL Offloading" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../004_Load_Balancing/index.html" class="btn btn-neutral float-right" title="Loadbalancing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

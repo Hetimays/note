@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deploy on EVE-NG &mdash; note 1 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/my_theme.css?v=efdfeb71" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=b0bc784d"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/translations.js?v=91613774"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="SSL Offloading" href="../002_SSL_Offloading/index.html" />
+    <link rel="prev" title="Citrix" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            note
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../AWS/index.html">AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Citrix</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Deploy on EVE-NG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">0. はじめに</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1. 初期セットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ha">2. HAの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network">3. networkの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vserver">4. vServerの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#server-service">5. Server, Serviceの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">6. 確認</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../002_SSL_Offloading/index.html">SSL Offloading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../003_redirect_http_to_https/index.html">HTTPS Redirect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../004_Load_Balancing/index.html">Loadbalancing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../005_Persistence/index.html">Parsistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../006_Content_Switching/index.html">Contents Switching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../EVE-NG_on_proxmox/index.html">EVE-NG構築</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../F5/BIG-IP/index.html">F5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">note</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Citrix</a></li>
+      <li class="breadcrumb-item active">Deploy on EVE-NG</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/Contents/Citrix/Citrix_ADC_VPX/001_setup/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deploy-on-eve-ng">
+<h1>Deploy on EVE-NG<a class="headerlink" href="#deploy-on-eve-ng" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>0. はじめに<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>CitrixのCitrix ADC VPX製品について記載していきます。<br />
+本製品はL4,L7ロードバランサ、SSLオフロード、コンテンツスイッチなどの機能があります。<br />
+VPXは仮想イメージのため、パイパーバイザ上であれば問題なく、専用アプライアンス・汎用サーバ・AWS/Azure/GCP等のクラウド上に建てることができます。<br />
+専用アプライアンスは廃止になる噂もあり、最近は汎用サーバorクラウド上に構築するのが前提になってきているように見えます。</p>
+<p><br><br></p>
+</section>
+<section id="id2">
+<h2>1. 初期セットアップ<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>今回はEVE-NG上で構築しました。（EVE-NG上にVPXを建てるところは他ノードと同様のため省略）<br />
+構成は以下の様なワンアーム構成でHAを組み、E2Eでトラフィックを流すところまで進めます。</p>
+<p><img alt="topo1" src="../../../../_images/image-33.png" /></p>
+<br>
+<br>
+<details><summary>sw preconfig</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">##cisco sw</span>
+<span class="n">conf</span> <span class="n">t</span>
+<span class="n">vlan</span> <span class="mi">10</span><span class="p">,</span><span class="mi">20</span>
+<span class="nb">int</span> <span class="n">ra</span> <span class="n">e0</span><span class="o">/</span><span class="mi">0</span><span class="o">-</span><span class="mi">1</span>
+ <span class="n">switchport</span> <span class="n">trunk</span> <span class="n">allowed</span> <span class="n">vlan</span> <span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span>
+ <span class="n">switchport</span> <span class="n">mode</span> <span class="n">trunk</span>
+<span class="nb">int</span> <span class="n">e0</span><span class="o">/</span><span class="mi">2</span>
+ <span class="n">switchport</span> <span class="n">access</span> <span class="n">vlan</span> <span class="mi">10</span>
+ <span class="n">switchport</span> <span class="n">mode</span> <span class="n">access</span>
+<span class="nb">int</span> <span class="n">e0</span><span class="o">/</span><span class="mi">3</span>
+ <span class="n">switchport</span> <span class="n">access</span> <span class="n">vlan</span> <span class="mi">20</span>
+ <span class="n">switchport</span> <span class="n">mode</span> <span class="n">access</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+</details>  
+<br>
+<br>
+<p>起動後、コンソール接続し、<strong>ID:nsroot / PW:nsroot</strong>でログイン。初回ログイン時は新しいパスワード入力を求められるので設定します。</p>
+<p><img alt="init_password" src="../../../../_images/image.png" /></p>
+<p>初期設定では、管理IPが<strong>192.168.100.1</strong>になっています。<br />
+今回の外部NWは<strong>192.168.10.0/24</strong>のため、設定を変更します。<br />
+(EVE-NGのnetworkオブジェクトにあるManagement(Cloud0)が物理NICの所属するNWに繋がっています)</p>
+<p><img alt="change_mgmt_ip" src="../../../../_images/image-3.png" /></p>
+<p>設定後、再起動します。<br />
+立ち上がってきたらブラウザから設定したIPにアクセスします。</p>
+<p><img alt="login_page" src="../../../../_images/image-4.png" /></p>
+<p>初期設定のウィザードが表示されるので、順番に設定していきます。</p>
+<p><img alt="wizard1" src="../../../../_images/image-5.png" /></p>
+<p>VPXには3種類のIPがあります。<br />
+このウィザードではsnipを設定するので、上記トポロジのvlan10,20のIPを設定します。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>IP</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nsip</p></td>
+<td><p>管理用のIP</p></td>
+</tr>
+<tr class="row-odd"><td><p>snip</p></td>
+<td><p>インターフェースのIP</p></td>
+</tr>
+<tr class="row-even"><td><p>vip</p></td>
+<td><p>クライアント側からアクセスするIP</p></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p><img alt="config_nsip" src="../../../../_images/image-9.png" /></p>
+<p>次にホスト名などの設定を行います。</p>
+<p><img alt="wizard2" src="../../../../_images/image-11.png" /></p>
+<p><img alt="alt text" src="../../../../_images/image-10.png" /></p>
+<p><br><br></p>
+</section>
+<section id="ha">
+<h2>2. HAの設定<a class="headerlink" href="#ha" title="Link to this heading"></a></h2>
+<p>HA Monitoring / HA Heartbeatの処理を行うインターフェースを指定します。<br />
+デフォルトで有効かつ今回は1/1のみでHAパケットをやり取りしたいので、それ以外のインターフェースでOFFにします。</p>
+<p><code class="docutils literal notranslate"><span class="pre">System</span> <span class="pre">&gt;</span> <span class="pre">Network</span> <span class="pre">&gt;</span> <span class="pre">Interfaces</span></code></p>
+<p><img alt="select_if1" src="../../../../_images/image-12.png" /><br />
+<img alt="if_config1" src="../../../../_images/image-13.png" /></p>
+<p>次にHAの対向機器を設定します。<br />
+Remote Node IP Addressに対向HA機器の管理IP、Remote System Login Credential
+に対向HA機器のクレデンシャルを入力します。<br />
+この設定は片系のみで問題ありません。</p>
+<p><code class="docutils literal notranslate"><span class="pre">System</span> <span class="pre">&gt;</span> <span class="pre">High</span> <span class="pre">Availability</span> <span class="pre">&gt;</span> <span class="pre">Nodes</span></code></p>
+<p><img alt="ha1" src="../../../../_images/image-14.png" /><br />
+<img alt="ha2" src="../../../../_images/image-15.png" /></p>
+<p>設定後、画面更新をするとNODE STATEがUPになり、HAが組めていることが確認できます。</p>
+<p><img alt="ha3" src="../../../../_images/image-16.png" /></p>
+<p>今回はホスト名がvpx1のノードをprimaryにして進めようと思いますので、右クリックからForce failoverをします。</p>
+<p><img alt="ha4" src="../../../../_images/image-17.png" /><br />
+<img alt="ha5" src="../../../../_images/image-18.png" /><br />
+<img alt="ha6" src="../../../../_images/image-19.png" /></p>
+<p>vpxのHA heartbeatはvlan1, UDP3003でやり取りされます。<br />
+fwを経由していたり、aclがある場合は注意しましょう。
+<img alt="ha7" src="../../../../_images/image-20.png" /></p>
+<p><br><br></p>
+</section>
+<section id="network">
+<h2>3. networkの設定<a class="headerlink" href="#network" title="Link to this heading"></a></h2>
+<p>通信用のVLANインターフェースを作成します。<br />
+vlan10,vlan20分を作成し、先程作成したsnipを紐づけます。</p>
+<p><img alt="vlan1" src="../../../../_images/image-21.png" /><br />
+<img alt="vlan2" src="../../../../_images/image-22.png" /><br />
+<img alt="vlan3" src="../../../../_images/image-24.png" /><br />
+<img alt="vlan4" src="../../../../_images/image-23.png" /></p>
+<p>この時点でclient/serverからvpxまでpingが到達するはずです。
+<img alt="ping1" src="../../../../_images/image-2.png" /><br />
+<img alt="ping2" src="../../../../_images/image-25.png" /></p>
+<p><br><br></p>
+</section>
+<section id="vserver">
+<h2>4. vServerの設定<a class="headerlink" href="#vserver" title="Link to this heading"></a></h2>
+<p>vServerの設定では、クライアントがアクセスする、VPXが持つサーバの仮想IP(vip)を設定します。
+vipはclient側でルーティングを考慮しなくても良いように、snipと同セグメントで設定します。
+また、今回はSSLオフロードはせず、クライアント-VPX間をHTTPで受け、ロードバランスする設定にしています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Traffic</span> <span class="pre">Management</span> <span class="pre">&gt;</span> <span class="pre">Load</span> <span class="pre">Balancing</span> <span class="pre">&gt;</span> <span class="pre">Virtual</span> <span class="pre">Servers</span></code></p>
+<p><img alt="vs1" src="../../../../_images/image-26.png" /><br />
+<img alt="vs2" src="../../../../_images/image-31.png" /></p>
+<p><br><br></p>
+</section>
+<section id="server-service">
+<h2>5. Server, Serviceの設定<a class="headerlink" href="#server-service" title="Link to this heading"></a></h2>
+<p>vServerにサーバ情報を紐づけていないため、まだ通信は通りません。<br />
+次はServerの設定をしていきます。<br />
+IPAddressにはロードバランス先の実際のサーバのIPを設定します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Traffic</span> <span class="pre">Management</span> <span class="pre">&gt;</span> <span class="pre">Load</span> <span class="pre">Balancing</span> <span class="pre">&gt;</span> <span class="pre">Servers</span></code></p>
+<p><img alt="sv1" src="../../../../_images/image-27.png" /><br />
+<img alt="sv2" src="../../../../_images/image-29.png" /></p>
+<p>次に上記で定義したServerをServiceに紐づけます。<br />
+Serviceはデフォルトでsnipから設定したServerのIPへTCPを使用したヘルスチェックを行います。<br />
+今回は、serverでport8080でhttpを受け付けるようにしますので、service側も同様に8080で設定します。<br />
+Server側でpythonの簡易web serverを実行。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span> <span class="mi">8080</span>
+</pre></div>
+</div>
+<p>VPXに戻り、serviceを設定。
+<code class="docutils literal notranslate"><span class="pre">Traffic</span> <span class="pre">Management</span> <span class="pre">&gt;</span> <span class="pre">Load</span> <span class="pre">Balancing</span> <span class="pre">&gt;</span> <span class="pre">Services</span></code></p>
+<p><img alt="service1" src="../../../../_images/image-30.png" /><br />
+<img alt="service2" src="../../../../_images/image-39.png" /><br />
+<img alt="service3" src="../../../../_images/image-32.png" /></p>
+<p>Serviceの設定が完了したら、次は再度vServerの設定に戻ります。<br />
+Services and Service Groupsで定義したServiceを紐づけます。<br />
+設定後、紐づくServiceがUPになっているため、vServer自体もSTATEがUPになります。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Traffic</span> <span class="pre">Management</span> <span class="pre">&gt;</span> <span class="pre">Load</span> <span class="pre">Balancing</span> <span class="pre">&gt;</span> <span class="pre">Virtual</span> <span class="pre">Servers</span></code></p>
+<p><img alt="vs3" src="../../../../_images/image-28.png" /><br />
+<img alt="vs4" src="../../../../_images/image-34.png" /><br />
+<img alt="vs5" src="../../../../_images/image-35.png" /><br />
+<img alt="vs6" src="../../../../_images/image-36.png" /><br />
+<img alt="vs8" src="../../../../_images/image-38.png" /></p>
+<p><br><br></p>
+</section>
+<section id="id3">
+<h2>6. 確認<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>設定が完了したので、clientからport8080でhttpアクセスをしてみましょう。<br />
+キャプチャはVPXとSWの間で取っていますので、client-VPX / VPX-server 間の両方を確認できます。</p>
+<p><img alt="http1" src="../../../../_images/image-37.png" /><br />
+<img alt="http2" src="../../../../_images/image-40.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Citrix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../002_SSL_Offloading/index.html" class="btn btn-neutral float-right" title="SSL Offloading" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, ys.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

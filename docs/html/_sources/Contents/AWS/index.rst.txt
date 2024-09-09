@@ -7,3 +7,14 @@ AWS
 
    ec2/index
    lambda/index
+   s3/index
+   rds/index
+   cloudformation/index
+   iam/index
+   cloudwatch/index
+   route53/index
+   dynamodb/index
+   sns/index
+   sqs/index
+   directconnect/index
+   elb/index

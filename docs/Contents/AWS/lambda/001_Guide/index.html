@@ -66,6 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../s3/index.html">s3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../rds/index.html">rds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cloudformation/index.html">cloudformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../transit-gateway/index.html">transit-gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../iam/index.html">iam</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cloudwatch/index.html">cloudwatch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../route53/index.html">route53</a></li>
@@ -77,8 +78,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Cisco/index.html">CCIE EI v1.1 Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../EVE-NG_on_proxmox/index.html">EVE-NG構築</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Citrix/Citrix_ADC_VPX/index.html">Citrix</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../F5/BIG-IP/index.html">F5</a></li>
 </ul>
 
@@ -115,15 +116,6 @@
 <p>AWS Lambdaは、Amazon Web Services（AWS）が提供するサーバーレスコンピューティングサービスである。
 ユーザーは、サーバーのプロビジョニングや管理を行わずに、コードを実行できる。
 このサービスはイベント駆動型であり、特定のトリガー（イベント）に応じて自動的に関数を実行する。</p>
-<p><strong>Lambdaの主な特徴:</strong></p>
-<ol class="arabic simple">
-<li><p>サーバーレスアーキテクチャ: AWS Lambdaでは、ユーザーがサーバーを管理する必要がない。コードの実行は完全にAWSにより管理され、インフラのスケーリングやセキュリティパッチの適用などの運用作業もAWS側が担当する。</p></li>
-<li><p>イベント駆動型の実行: Lambda関数は、S3へのファイルアップロード、DynamoDBの更新、API Gatewayのリクエストなど、さまざまなAWSサービスからのイベントをトリガーとして実行される。これにより、システム全体の動的な連携が可能である。</p></li>
-<li><p>自動スケーリング: Lambdaは、リクエストに応じて自動的にスケールする。コードの実行リクエストが増加した場合には同時に複数の関数インスタンスが立ち上がり、負荷に対応する。これにより、事前にリソースを割り当てる必要がなく、リソースの効率的な利用が可能である。</p></li>
-<li><p>課金体系: Lambdaは、実行時間に基づく料金体系を採用している。ユーザーは、関数が実際に実行された時間に対してのみ課金され、無駄なコストを削減できる。また、リクエスト数に応じての課金も行われるため、小規模なシステムでは非常に経済的である。</p></li>
-<li><p>対応言語: Lambdaは、JavaScript（Node.js）、Python、Java、C#（.NET）、Go、Rubyなど、複数のプログラミング言語をサポートしている。また、カスタムランタイムを使用することで、他の言語にも対応できる。</p></li>
-<li><p>統合と連携: Lambdaは、多くのAWSサービスと密接に統合されている。Amazon S3、DynamoDB、SNS、SQS、API GatewayなどのAWSサービスとの連携が容易であり、サーバーレスアーキテクチャを活用したシステム構築が迅速に行える。</p></li>
-</ol>
 <p><strong>ユースケース:</strong></p>
 <p>AWS Lambdaは、以下のようなユースケースに適している。</p>
 <blockquote>

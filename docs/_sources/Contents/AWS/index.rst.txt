@@ -19,3 +19,4 @@ AWS
    sqs/index
    directconnect/index
    elb/index
+   bedrock/index

@@ -1,7 +1,6 @@
 CCIE EI v1.1 Contents
 -------------------------------------------------
 
-
 17.x Configuration Guide
 
 * `c9300 Configuration Guide <https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-13/configuration_guide/b-1713-9300-cg/contents.html>`_
@@ -13,6 +12,7 @@ CCIE EI v1.1 Contents
 * `IP Addressing Configuration Guide <https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-addressing/b-ip-addressing.html>`_  
 * `Network Services Configuration Guide <https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ntw-servs/b-network-services.html>`_  
 * `Programmability Configuration Guide <https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/1713/b_1713_programmability_cg.html>`_  
+
 
 Command Reference
 

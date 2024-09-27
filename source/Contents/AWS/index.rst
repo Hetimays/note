@@ -4,6 +4,7 @@ AWS
 .. toctree::
    :maxdepth: 2
    :titlesonly:
+   :hidden:
 
    ec2/index
    lambda/index
@@ -20,3 +21,8 @@ AWS
    directconnect/index
    elb/index
    bedrock/index
+
+
+Guideには、各サービスの使い方を記載している。
+
+APIには、サービスの詳細な動きを把握するためにAPI referenceを基にメソッド毎にCRUDで分類した一覧をまとめる。
